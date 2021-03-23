@@ -8,14 +8,12 @@ Jaime Alonso Poyatos {SoyJaimeXD}
 Eduardo Huélamo Castellanos {Edvardo87}
 
 Javier Escudero García {listo2020}
+
 ## Objetivos del trabajo
-
--Logar crear un juego entretenido
-
--Lograr una optimización tiempo-trabajo buena, para asi poder tener tiempo para otras asignaturas
-
--Ayudar a futuros trabajos dando una idea distinta
-
--Adquirir nuevos conocimientos sobre programación y aprovechar los adquiridos
-
--Sacar buena nota
+-Utilizar funciones correctamente.
+-Optimizar el juego correctamente.
+-Aplicar todos los ficheros aprendidos en clase y alguno mas.
+-Utilizar vectores numericos y de caráteres correcftamente.
+-Lograr crear un juego entretenido.
+-Ayudar a futuros trabajos dando una idea distinta.
+-Adquirir nuevos conocimientos sobre programación y aprovechar los adquiridos.
