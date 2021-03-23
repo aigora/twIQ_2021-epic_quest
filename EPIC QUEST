@@ -1,8 +1,8 @@
 /*EPIC QUEST*/
 /*Creadores:
-Eduardo Huélamo Castellanos
+Eduardo HuÃ©lamo Castellanos
 Jaime Alonso Poyatos
-Javier Escudero García
+Javier Escudero GarcÃ­a
 */
 
 #include<stdio.h>
@@ -14,7 +14,7 @@ Javier Escudero García
 #define N 1000
 
 int main(){
-//función para poder implimir tildes, acentos y ñ
+//funciÃ³n para poder implimir tildes, acentos y Ã±
 setlocale(LC_CTYPE, "Spanish");
 system ("color 8F");
 char usuario[N],contrasena[N],espacios[N],nombre[N],final[N],personaje[N];
@@ -70,7 +70,7 @@ gets(personaje);
 
 
 
-printf("¿Desea, jugar de nuevo (si/no)?\n");
+printf("Â¿Desea, jugar de nuevo (si/no)?\n");
 for(i=0;i<27;i++){
 printf("\n");}
 gets(final);
