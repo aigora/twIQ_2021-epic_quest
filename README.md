@@ -1,4 +1,4 @@
-# //Epic Quest
+# Epic Quest
 
 Juego, en el que el protagista, en este caso un caballer@, alien, etc (según elección de lo que quiera ser), ha de ir venciendo a una serie de enemigos, tras resolver unos acertijos y así narrar su propia historia.
 
