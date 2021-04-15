@@ -13,7 +13,7 @@ Javier Escudero García {listo2020}
 -Utilizar funciones correctamente.
 -Optimizar el juego correctamente.
 -Aplicar todos los ficheros aprendidos en clase y alguno mas.
--Utilizar vectores numericos y de caráteres correcftamente.
+-Utilizar vectores numericos y de caráteres correctamente.
 -Lograr crear un juego entretenido.
 -Ayudar a futuros trabajos dando una idea distinta.
 -Adquirir nuevos conocimientos sobre programación y aprovechar los adquiridos.
