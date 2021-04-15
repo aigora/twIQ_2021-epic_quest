@@ -13,12 +13,28 @@ Javier Escudero García
 
 #define N 1000
 
+
+
+
+
+void intruciones(){
+	printf("Las intrucciones y normas son básicas:\n");
+	printf("-El jugador ha de ir resolviendo una serie de preguntas para avanzar en la historia.\n");
+    printf("-Se comienza con determinada vida y monedas, según el nivel de dificultad escogido.\n");
+    printf("-Las monedas se pueden utilizar para comprar las soluciones a los acertijos,etc.\n");
+    printf("-No esta permitido hacer trampas, el jugador obtendrá un fichero con sus estadísticas durante el juego.\n");
+    printf("\n");
+};
+
+
 int main(){
 //función para poder implimir tildes, acentos y ñ
 setlocale(LC_CTYPE, "Spanish");
 system ("color 8F");
-char usuario[N],contrasena[N],espacios[N],nombre[N],final[N],personaje[N];
-int i,fin=0;
+char usuario[N],contrasena[N],espacios[N],nombre[N],final[N],personaje[N],respuesta[N];
+int i,w=0,fin=0,difi,vida,monedas;
+
+
 
 
 //Inicio
@@ -43,14 +59,18 @@ printf(" \n");
 printf(" \n");
 system ("color 9E");
 
-printf("Bienvenido, introduzca su nombre:\n");
+printf("Bienvenido jugador, introduzca su nombre:\n");
 for(i=0;i<51;i++){
 printf("\n");}
 gets(nombre);
 for(i=0;i<100;i++){
 printf("\n");}
+
+
+
+//comienza bucle
 do{
-printf("Escoja que personaje quiere ser:\n\n\n");
+printf("%s, escoja el personaje que quiere ser:\n",nombre);
 
 printf("||           Caballero           ||             Hada              ||            Sabio              ||            Juglar             ||           Nigromante          ||           Personal            ||\n");
 printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
@@ -87,7 +107,58 @@ printf("||-------------------------------||-------------------------------||----
 for(i=0;i<19;i++){
 printf("\n");}
 gets(personaje);
+printf("¿Quiere leer las intrucciones y normas? (si/no)\n");
+scanf("%s",respuesta);
+if (respuesta[0]=='s'){
+	intruciones();
+}
+else{
+printf(" \n");}
+printf("Pulse enter para continuar:\n");
+fflush(stdin);
+gets(espacios);
 
+printf(" ");
+printf("Escoja el nivel de dificultad que desea:\n");
+printf("(1)-->Dificultad1--> |Vida=5 corazones |Monedas=10|Otros=El personaje tiene .....,preguntas mas ´fáciles,etc\n");
+printf("(2)-->Dificultad2--> |Vida=3 corazones |Monedas=8|Otros=El personaje tiene .....\n");
+printf("(3)-->Dificultad3--> |Vida=2 corazones |Monedas=4|Otros=El personaje tiene .....\n");
+scanf("%d",&difi);
+while (w==0){
+switch (difi){
+	case 1:
+		 vida=5;
+		 monedas=10;
+		 w=1;
+	   	break;
+	case 2:
+		 vida=3;
+		 monedas=8;
+		 w=1;
+		 break;
+	case 3:
+		 vida=2;
+		 monedas=4;
+		 w=1;
+	     break;
+	 default:
+	     printf("No ha escogido una opción correcta, por favor introduzca un nivel de dificultad:\n");
+	      scanf("%d",&difi);	
+}}
+//Juego
+system ("color 89");
+printf("\n");
+printf("\n");
+fflush(stdin);
+for(i=0;i<50;i++){printf("\n");}
+printf("%s, aquí comienza su historia, tendrá que luchar contra monstruos y vencer a esfinges cuyos enigmas ni las mentes más increibles, han logrado resolver. Aquí perdara todo el miedo a las matemáticas o dejará la universidad, usted decide...\t",nombre);
+printf("\n");
+printf("--------------\n");
+for(i=0;i<6;i++){printf("||||||||||||||\n");}
+printf("--------------\n");
+
+printf("Pulse enter para contiuar:\n");
+gets(espacios);
 
 
 
