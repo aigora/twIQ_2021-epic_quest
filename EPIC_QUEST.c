@@ -1,8 +1,10 @@
+
+
 /*EPIC QUEST*/
 /*Creadores:
-Eduardo HuÃ©lamo Castellanos
+Eduardo Huélamo Castellanos
 Jaime Alonso Poyatos
-Javier Escudero GarcÃ­a
+Javier Escudero García
 */
 
 #include<stdio.h>
@@ -11,30 +13,41 @@ Javier Escudero GarcÃ­a
 #include <locale.h>
 #include <string.h> 
 
-#define N 1000
+#define N 10000
 
 
 
 
 
 void intruciones(){
-	printf("Las intrucciones y normas son bÃ¡sicas:\n");
+	printf("Las intrucciones y normas son básicas:\n");
 	printf("-El jugador ha de ir resolviendo una serie de preguntas para avanzar en la historia.\n");
-   	printf("-Se comienza con determinada vida y monedas, segÃºn el nivel de dificultad escogido.\n");
+   	printf("-Se comienza con determinada vida y monedas, según el nivel de dificultad escogido.\n");
   	printf("-Las monedas se pueden utilizar para comprar las soluciones a los acertijos,etc.\n");
-  	printf("-No esta permitido hacer trampas, el jugador obtendrÃ¡ un fichero con sus estadÃ­sticas durante el juego.\n");
+  	printf("-No esta permitido hacer trampas, el jugador obtendrá un fichero con sus estadísticas durante el juego.\n");
   	printf("\n");
-};
+}
+
+void hack(){
+	printf("¿Quiere activar alguno de estos hacks?\n");
+	printf("0=Inmortalidad (vidas y monedas infinitas)\n");
+    printf("1=Saltarse alguna parte (Introduzca el numero de la parte)\n");
+    printf("2=Ambos\n");
+    printf("3=Ninguno\n");
+
+}
 
 
 int main(){
 
-//funciÃ³n para poder implimir tildes, acentos y Ã±
+FILE*fhistoria,*flongitud;
+//función para poder implimir tildes, acentos y ñ
 	setlocale(LC_CTYPE, "Spanish");
 	system ("color 8F");
-	char usuario[N],contrasena[N],espacios[N],nombre[N],final[N],personaje[N],respuesta[N];
-	int i,w=0,fin=0,difi,vida,monedas;
-
+	char nombre[N],personaje[N],historia[N];
+	char espacios[N],final[N],respuesta[N];
+	int i,w=0,j,fin=0,jugadas=0,difi,vida,monedas,tamanoparte[N],part=0;
+	int hacks,sal,saltar,partes[N];
 
 
 
@@ -84,28 +97,28 @@ int main(){
 		printf("||           Caballero           ||             Hada              ||            Sabio              ||            Juglar             ||           Nigromante          ||           Personal            ||\n");
 		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
 		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
-		printf("|| *SÃ­mbolo de poder y gloria,*  ||    *Antigua protectora de*    ||      *MÃ¡ximo referente*       ||     *Por todos conocido,*     ||   *Un ser que ya ni humano*   ||    Muy pocos pueden llegar    ||\n"); 
-		printf("||*portador de la antigua espada*||   *bosques  y manantiales,*   || *de intelectuales y lÃ­deres,* || *aquel que por los senderos*  ||     *puede considerarse,*     ||    a ser grandes leyendas,    ||\n");
-		printf("||         *de Drogmagt,*        ||        *venerada por*         || *legendario investigador con* ||   *deleita nuestros oÃ­dos*    || *inmoral,  ambicioso y ajeno* ||     pero todos  deberÃ­an      ||\n");
-		printf("|| *aquel que saliÃ³ victorioso*  ||    *numerosas creencias,*     ||*innumerables  descubrimientos*|| *a cambio  de buen alimento,* || *a los principios naturales.* ||    tener una  oportunidad     ||\n");
-		printf("|| *de mÃºltiples y legendarias*  || *aquella llamada  por muchos* ||        *a su espalda,*        ||   *y que por  algÃºn cobijo*   ||Protagonista de temibles actos,||   para intentar  igualarse    ||\n");
-		printf("||         *contiendas.*         ||  *como descendiente directa*  ||    *genio tras varios de*     ||      *narra los eventos*      || difunde su  doctrina a la par ||    a estos seres mÃ­ticos.     ||\n");
+		printf("|| *Símbolo de poder y gloria,*  ||    *Antigua protectora de*    ||      *Máximo referente*       ||     *Por todos conocido,*     ||   *Un ser que ya ni humano*   ||    Muy pocos pueden llegar    ||\n"); 
+		printf("||*portador de la antigua espada*||   *bosques  y manantiales,*   || *de intelectuales y líderes,* || *aquel que por los senderos*  ||     *puede considerarse,*     ||    a ser grandes leyendas,    ||\n");
+		printf("||         *de Drogmagt,*        ||        *venerada por*         || *legendario investigador con* ||   *deleita nuestros oídos*    || *inmoral,  ambicioso y ajeno* ||     pero todos  deberían      ||\n");
+		printf("|| *aquel que salió victorioso*  ||    *numerosas creencias,*     ||*innumerables  descubrimientos*|| *a cambio  de buen alimento,* || *a los principios naturales.* ||    tener una  oportunidad     ||\n");
+		printf("|| *de múltiples y legendarias*  || *aquella llamada  por muchos* ||        *a su espalda,*        ||   *y que por  algún cobijo*   ||Protagonista de temibles actos,||   para intentar  igualarse    ||\n");
+		printf("||         *contiendas.*         ||  *como descendiente directa*  ||    *genio tras varios de*     ||      *narra los eventos*      || difunde su  doctrina a la par ||    a estos seres míticos.     ||\n");
 		printf("||                               ||    *de los mismos dioses*     ||    *los grandes  avances*     ||    *de parajes escondidos*    ||que estudia las  bases de todo,||                               ||\n");
-		printf("||                               ||      *de la naturaleza.*      ||  *tecnolÃ³gicos del momento.*  ||   *mientras juntos bebemos.*  || incluso daÃ±Ã¡ndose a sÃ­ mismo. ||                               ||\n");
+		printf("||                               ||      *de la naturaleza.*      ||  *tecnológicos del momento.*  ||   *mientras juntos bebemos.*  || incluso dañándose a sí mismo. ||                               ||\n");
 		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
 		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
-		printf("||      Aunque el caballero      || Es bien sabido  que las hadas || Tras tantos aÃ±os de estudios, ||  Toda una vida entreteniendo  ||  Desde que magia  y alquimia  ||No eres un gran ser legendario,||\n");
-		printf("||     sea  reconocido  como     ||   son seres de corazÃ³n puro   ||este  anciano de frÃ¡gil aspecto||     a todo tipo de seres      || alquimia fueron descubiertas, ||       ni mucho menos,         ||\n");
-		printf("||    un hÃ©roe  entre  hÃ©roes    ||   y pensamiento  bondadoso,   ||     logrÃ³ la elaboraciÃ³n      ||  a lo largo  del basto mundo  ||   no fueron  pocos los que    ||     apenas has salido de      ||\n");
-		printf("||   debido a sus  increÃ­bles    ||  por lo que suelen despertar  ||         de un hechizo         || le han servido a este artista ||quisieron explorar sus lÃ­mites,||       tu propia aldea,        ||\n");
-		printf("||     capacidades fÃ­sicas,      ||  la piedad  tanto de aliados  || que le permitiÃ³  sobrevivir a ||   para obtener  suficientes   ||          ignorando            ||   pero esto no  te arrebata   ||\n");
-		printf("|| tambiÃ©n es de sobra conocido  ||       como de enemigos.       ||  a todo tipo de enfermedades, ||   conocimientos acerca del    ||  cualquier  principio moral.  ||     la ilusiÃ³n de avanzar,    ||\n");
-		printf("|| su  mal humor y su facilidad  ||    Debido a su naturaleza,    ||volviÃ©ndolo parcialmente inmune||   correcto establecimiento    ||Uno de ellos destacÃ³ del resto,||asÃ­ que te  dispones a afrontar||\n");
-		printf("||     para la creaciÃ³n de       ||   no posee gran resistencia   ||      al paso del tiempo.      || de relaciones con casi todos. ||         descubriendo          ||una nueva y peligrosa  aventura||\n");
-		printf("||   conflictos innecesarios.    || ante  ningÃºn  tipo de ataque, ||   Su costumbre de aislarse    ||            AdemÃ¡s,            ||principios  profundos y oscuros||    de la que  nadie espera    ||\n");
+		printf("||      Aunque el caballero      || Es bien sabido  que las hadas || Tras tantos años de estudios, ||  Toda una vida entreteniendo  ||  Desde que magia  y alquimia  ||No eres un gran ser legendario,||\n");
+		printf("||     sea  reconocido  como     ||   son seres de corazón puro   ||este  anciano de frágil aspecto||     a todo tipo de seres      || alquimia fueron descubiertas, ||       ni mucho menos,         ||\n");
+		printf("||    un héroe  entre  héroes    ||   y pensamiento  bondadoso,   ||     logró la elaboración      ||  a lo largo  del basto mundo  ||   no fueron  pocos los que    ||     apenas has salido de      ||\n");
+		printf("||   debido a sus  increíbles    ||  por lo que suelen despertar  ||         de un hechizo         || le han servido a este artista ||quisieron explorar sus límites,||       tu propia aldea,        ||\n");
+		printf("||     capacidades físicas,      ||  la piedad  tanto de aliados  || que le permitió  sobrevivir a ||   para obtener  suficientes   ||          ignorando            ||   pero esto no  te arrebata   ||\n");
+		printf("|| también es de sobra conocido  ||       como de enemigos.       ||  a todo tipo de enfermedades, ||   conocimientos acerca del    ||  cualquier  principio moral.  ||     la ilusión de avanzar,    ||\n");
+		printf("|| su  mal humor y su facilidad  ||    Debido a su naturaleza,    ||volviéndolo parcialmente inmune||   correcto establecimiento    ||Uno de ellos destacó del resto,||así que te  dispones a afrontar||\n");
+		printf("||     para la creación de       ||   no posee gran resistencia   ||      al paso del tiempo.      || de relaciones con casi todos. ||         descubriendo          ||una nueva y peligrosa  aventura||\n");
+		printf("||   conflictos innecesarios.    || ante  ningún  tipo de ataque, ||   Su costumbre de aislarse    ||            Además,            ||principios  profundos y oscuros||    de la que  nadie espera    ||\n");
 		printf("||                               ||  pero esto queda compensado   || en sus estudios pudo volverle ||   la experiencia  obtenida    ||del mundo y su  funcionamiento,||      que salgas con vida.     ||\n");
-		printf("||                               || con su capacidad de curaciÃ³n. || el mÃ¡s inteligente del mundo, ||   durante todos sus viajes    || permitiÃ©ndole  incluso evitar ||   (Esto es el modo difÃ­cil)   ||\n");
-		printf("||                               ||                               ||    pero su escasa relaciÃ³n    ||   hacia parajes inhÃ³spitos    ||   daÃ±os o incluso la muerte   ||     (por si no se nota XD)    ||\n");
+		printf("||                               || con su capacidad de curación. || el más inteligente del mundo, ||   durante todos sus viajes    || permitiéndole  incluso evitar ||   (Esto es el modo difícil)   ||\n");
+		printf("||                               ||                               ||    pero su escasa relación    ||   hacia parajes inhóspitos    ||   daños o incluso la muerte   ||     (por si no se nota XD)    ||\n");
 		printf("||                               ||                               || con otros  seres lo ha vuelto ||   le ha servido para saber    ||  gracias a su  magia arcana.  ||                               ||\n");
 		printf("||                               ||                               ||      odioso e irritante.      ||     reaccionar mejor ante     ||                               ||                               ||\n");
 		printf("||                               ||                               ||                               ||   las  peores  situaciones.   ||                               ||                               ||\n");
@@ -117,7 +130,7 @@ int main(){
 			printf("\n");
 		}
 		gets(personaje);
-		printf("Â¿Quiere leer las intrucciones y normas? (si/no)\n");
+		printf("¿Quiere leer las intrucciones y normas? (si/no)\n");
 		scanf("%s",respuesta);
 		if (respuesta[0]=='s'){
 			intruciones();
@@ -130,33 +143,54 @@ int main(){
 
 		printf(" ");
 		printf("Escoja el nivel de dificultad que desea:\n");
-		printf("(1)-->Dificultad1--> |Vida=5 corazones |Monedas=10|Otros=El personaje tiene .....,preguntas mÃ¡s fÃ¡ciles,etc\n");
+		printf("(1)-->Dificultad1--> |Vida=5 corazones |Monedas=10|Otros=El personaje tiene .....,preguntas más fáciles,etc\n");
 		printf("(2)-->Dificultad2--> |Vida=3 corazones |Monedas=8|Otros=El personaje tiene .....\n");
-		printf("(3)-->Dificultad3--> |Vida=2 corazones |Monedas=4|Otros=El personaje tiene .....\n");
 		scanf("%d",&difi);
 		while (w==0){
 			switch (difi){
 				case 1:
+					if(j!=2){
 					vida=5;
-			 		monedas=10;
+			 		monedas=10;}
+			 		fhistoria=fopen("historia1.txt","r");
+		            flongitud=fopen("tamano1.txt","r");
 			 		w=1;
 		   			break;
 				case 2:
+					if(j!=2){
 			 		vida=3;
-			 		monedas=8;
+			 		monedas=8;}
+			 		fhistoria=fopen("historia2.txt","r");
+		            flongitud=fopen("tamano2.txt","r");
 			 		w=1;
 			 		break;
-				case 3:
-			 		vida=2;
-			 		monedas=4;
-			 		w=1;
-		     		break;
 		 		default:
-		     		printf("No ha escogido una opciÃ³n correcta, por favor introduzca un nivel de dificultad:\n");
+		     		printf("No ha escogido una opción correcta, por favor introduzca un nivel de dificultad:\n");
 		      		scanf("%d",&difi);	
 			}
 		}
-	
+//lectura del tamaño
+if (flongitud==NULL){
+printf("Error en la apertura del tamaño de la historia\n");
+return 0;}
+i=0;
+while (!feof(flongitud)){
+		fscanf(flongitud,"%d",&tamanoparte[i]);
+	    i++;
+}
+fclose(flongitud);
+
+//lectura de la historia
+if (fhistoria==NULL){
+printf("Error en la apertura de la historia\n");
+return 0;}
+i=0;
+while (!feof(fhistoria)){
+		fscanf(fhistoria,"%c",&historia[i]);
+	    i++;
+}
+fclose(fhistoria);
+
 //Juego
 		system ("color 89");
 		printf("\n");
@@ -165,24 +199,128 @@ int main(){
 		for(i=0;i<50;i++){
 			printf("\n");
 		}
-		printf("%s, aquÃ­ comienza su historia, tendrÃ¡ que luchar contra monstruos y vencer a esfinges cuyos enigmas ni las mentes mÃ¡s increibles, han logrado resolver. AquÃ­ perderÃ¡ todo el miedo a las matemÃ¡ticas o dejarÃ¡ la universidad, usted decide...\t",nombre);
+		printf("%s, aquí comienza su historia, tendrá que luchar contra monstruos y vencer a esfinges cuyos enigmas ni las mentes más increibles, han logrado resolver. Aquí perderá todo el miedo a las matemáticas o dejará la universidad, usted decide...\t",nombre);
 		printf("\n");
 		printf("--------------\n");
-		for(i=0;i<6;i++){
+		for(i=0;i<3;i++){
 			printf("||||||||||||||\n");
 		}
 		printf("--------------\n");
 
 		printf("Pulse enter para continuar:\n");
 		gets(espacios);
+		
+		
+		
+
+//parte 1
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 2
+if (difi==4){
+printf("%s",nombre);}
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 3
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 4
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 5
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 6
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 7
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 8
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 9
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 10
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 11
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+//parte 12
+for(i=0;i<tamanoparte[part];i++){
+printf("%c",historia[j+i]);
+}
+j=j+tamanoparte[part];
+part++;
+printf("\n");
+
+gets(espacios);
+
+//fin 
 
 
 
 
 
 
-
-		printf("Â¿Desea, jugar de nuevo (si/no)?\n");
+		printf("¿Desea, jugar de nuevo (si/no)?\n");
 		for(i=0;i<51;i++){
 			printf("\n");
 		}
@@ -191,9 +329,50 @@ int main(){
 		if (final[0]=='n'){
 			fin=1;
 		} else if(final[0]=='s'){
-		printf("\n");
-		printf("Bienvenido de nuevo, %s",nombre);
-		}
+		 jugadas++;
+		 printf("\n");
+		 printf("Bienvenido de nuevo, %s\n",nombre);
+		 if (jugadas==1){
+		 printf("Por haber jugado honestamente la primera vez, le concedemos una serie de hacks.\n");}
+		 w=0;
+		 while (j==0){
+		 hack();
+		 scanf("%d",&hacks);
+		 switch (hacks){
+		 	case 0:
+		 		monedas=100000;
+		 		vida=100000;
+		 		j=1;
+
+		 	case 1:
+		 		printf("¿Cuántas partes quiere saltar?\n");
+                scanf("%d",&sal);
+                for (i=0;i<sal;i++){
+		 		     printf("Introzuca un numero: (comenzando la primera parte por 0=prólogo)\n");
+		 		     scanf("%d",&saltar);
+		 		     partes[saltar]=1;
+				 }
+				 j=2;
+
+		    case 2:
+		    	monedas=100000;
+		 		vida=100000;
+		 		printf("¿Cuántas partes quiere saltar?\n");
+                scanf("%d",&sal);
+                for (i=0;i<sal;i++){
+		 		     printf("Introzuca un numero: (comenzando la primera parte por 0=prólogo)\n");
+		 		     scanf("%d",&saltar);
+		 		     partes[saltar]=1;
+				 }
+				 j=1;
+		    case 3:
+		   	     printf("Gracias por no usar hacks :D .\n");
+		   	     j=2;
+	}}
+	j=0;
+	part=0;
+	}
+	
 	} while(fin==0);
 	
 	return 0;
