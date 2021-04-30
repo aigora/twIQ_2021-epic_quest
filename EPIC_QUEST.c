@@ -40,7 +40,7 @@ void hack(){
 
 int main(){
 
-FILE*fhistoria,*flongitud;
+	FILE*fhistoria,*flongitud;
 //función para poder implimir tildes, acentos y ñ
 	setlocale(LC_CTYPE, "Spanish");
 	system ("color 8F");
@@ -170,26 +170,28 @@ FILE*fhistoria,*flongitud;
 			}
 		}
 //lectura del tamaño
-if (flongitud==NULL){
-printf("Error en la apertura del tamaño de la historia\n");
-return 0;}
-i=0;
-while (!feof(flongitud)){
-		fscanf(flongitud,"%d",&tamanoparte[i]);
-	    i++;
-}
-fclose(flongitud);
+		if (flongitud==NULL){
+			printf("Error en la apertura del tamaño de la historia\n");
+			return 0;
+		}
+		i=0;
+		while (!feof(flongitud)){
+			fscanf(flongitud,"%d",&tamanoparte[i]);
+	    	i++;
+		}
+		fclose(flongitud);
 
 //lectura de la historia
-if (fhistoria==NULL){
-printf("Error en la apertura de la historia\n");
-return 0;}
-i=0;
-while (!feof(fhistoria)){
-		fscanf(fhistoria,"%c",&historia[i]);
-	    i++;
-}
-fclose(fhistoria);
+		if (fhistoria==NULL){
+			printf("Error en la apertura de la historia\n");
+			return 0;
+		}
+		i=0;
+		while (!feof(fhistoria)){
+			fscanf(fhistoria,"%c",&historia[i]);
+		    i++;
+		}
+		fclose(fhistoria);
 
 //Juego
 		system ("color 89");
@@ -214,104 +216,105 @@ fclose(fhistoria);
 		
 
 //parte 1
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 2
-if (difi==4){
-printf("%s",nombre);}
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		if (difi==4){
+			printf("%s",nombre);
+		}
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 3
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 4
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 5
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 6
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 7
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 8
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 9
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+		printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 10
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 11
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
 //parte 12
-for(i=0;i<tamanoparte[part];i++){
-printf("%c",historia[j+i]);
-}
-j=j+tamanoparte[part];
-part++;
-printf("\n");
+		for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+		}
+		j=j+tamanoparte[part];
+		part++;
+		printf("\n");
 
-gets(espacios);
+		gets(espacios);
 
 //fin 
 
@@ -329,49 +332,50 @@ gets(espacios);
 		if (final[0]=='n'){
 			fin=1;
 		} else if(final[0]=='s'){
-		 jugadas++;
-		 printf("\n");
-		 printf("Bienvenido de nuevo, %s\n",nombre);
-		 if (jugadas==1){
-		 printf("Por haber jugado honestamente la primera vez, le concedemos una serie de hacks.\n");}
-		 w=0;
-		 while (j==0){
-		 hack();
-		 scanf("%d",&hacks);
-		 switch (hacks){
-		 	case 0:
-		 		monedas=100000;
-		 		vida=100000;
-		 		j=1;
+		 	jugadas++;
+		 	printf("\n");
+		 	printf("Bienvenido de nuevo, %s\n",nombre);
+		 	if (jugadas==1){
+		 		printf("Por haber jugado honestamente la primera vez, le concedemos una serie de hacks.\n");}
+		 		w=0;
+		 		while (j==0){
+		 			hack();
+		 			scanf("%d",&hacks);
+		 			switch (hacks){
+		 				case 0:
+		 					monedas=100000;
+		 					vida=100000;
+		 					j=1;
 
-		 	case 1:
-		 		printf("¿Cuántas partes quiere saltar?\n");
-                scanf("%d",&sal);
-                for (i=0;i<sal;i++){
-		 		     printf("Introzuca un numero: (comenzando la primera parte por 0=prólogo)\n");
-		 		     scanf("%d",&saltar);
-		 		     partes[saltar]=1;
-				 }
-				 j=2;
+		 				case 1:
+		 					printf("¿Cuántas partes quiere saltar?\n");
+                			scanf("%d",&sal);
+                			for (i=0;i<sal;i++){
+		 		     			printf("Introzuca un numero: (comenzando la primera parte por 0=prólogo)\n");
+		 		     			scanf("%d",&saltar);
+		 		     			partes[saltar]=1;
+				 			}
+				 			j=2;
 
-		    case 2:
-		    	monedas=100000;
-		 		vida=100000;
-		 		printf("¿Cuántas partes quiere saltar?\n");
-                scanf("%d",&sal);
-                for (i=0;i<sal;i++){
-		 		     printf("Introzuca un numero: (comenzando la primera parte por 0=prólogo)\n");
-		 		     scanf("%d",&saltar);
-		 		     partes[saltar]=1;
-				 }
-				 j=1;
-		    case 3:
-		   	     printf("Gracias por no usar hacks :D .\n");
-		   	     j=2;
-	}}
-	j=0;
-	part=0;
-	}
+		    			case 2:
+		    				monedas=100000;
+		 					vida=100000;
+		 					printf("¿Cuántas partes quiere saltar?\n");
+                			scanf("%d",&sal);
+                			for (i=0;i<sal;i++){
+		 		     			printf("Introzuca un numero: (comenzando la primera parte por 0=prólogo)\n");
+		 		     			scanf("%d",&saltar);
+		 		     			partes[saltar]=1;
+				 			}
+				 			j=1;
+		    			case 3:
+		   	     			printf("Gracias por no usar hacks :D .\n");
+		   	     			j=2;
+					}
+				}
+				j=0;
+				part=0;
+		}
 	
 	} while(fin==0);
 	
