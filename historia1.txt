@@ -1,48 +1,73 @@
 >PROLOGO<
+
 Anio 490 d.C.  Tras la caida del Imperio Romano de Occidente en el 476 d.C, a causa del asesinato del ultimo emperador Julius Nepos, el mundo se volvio un caos. Los pueblos barbaros invadieron todos los territorios romanos, volviendo los caminos peligrosos y repletos de todo tipo de bestias infernales, mientras el hambre y las enfermedades segaban aun mas vidas.
 Nos situamos en un pequenio pueblo de Hispania, en la provincia de Lusitania.
-, ha de llevar un mensaje ha Roma (ultimo refugio de la civilizacion occidental), teniendo que atravesar las peligrosas tierras del oeste, los Pirineos, hogar de la legendaria pero terrorifica tribu de tlictamidia, protagonista de remotas leyendas siempre narradas por los legionarios más experimentados que alli lucharon.
+Usted, ha de llevar un mensaje ha Roma (ultimo refugio de la civilizacion occidental), teniendo que atravesar las peligrosas tierras del oeste, los Pirineos, hogar de la legendaria pero terrorifica tribu de tlictamidia, protagonista de remotas leyendas siempre narradas por los legionarios mas experimentados que alli lucharon.
 De camino, el capitan logra visualizar a lo lejos, reposando en las sombras de una pequenia arboleda, un grupo de legionarios portadores del estandarte de su legion, por lo que decide guiar a sus soldados hacia el lugar. Tras acercarse lo suficiente, la identidad del jefe del grupo queda desvelada, aliviando a nuestro protagonista, ya que se trataba de un camarada de batalla llamado Luciano, el cual reacciona a su llegada ordenado la formacion de sus soldados:
 _Luciano: Es el Decurion (Jefe de diez soldados o decuria), en formacion legionarios!
 En cuestion de unos pocos segundos, las tropas que yacian en la tierra se posicionaron en una casi perfecta formacion a la espera de la llegada del alto cargo.
-_: Ave Luciano, supongo que esto el lo que queda de nuestra gran legion, parece que los dioses no quieren que mi mision sea llevada a cabo...
+_Decurion: Ave Luciano, supongo que esto el lo que queda de nuestra gran legion, parece que los dioses no quieren que mi mision sea llevada a cabo...
 _Luciano: Mi Decurion, estos soldados, aunque se muestren derrotados y nuestras tropas mermadas (reducidas), son ante todo legionarios romanos que han estado envueltos en gran cantidad de nobles y legendarias y han sobrevivido, asi que con honor y valentia serviran hasta el fin de sus dias a Roma. Comandadnos, y le escoltaremos hacia el mismo inframundo si fuera necesario.
 El Decanus se postro ante su superior junto con el resto de su unidad, y, tras esto, el recientemente formado grupo se puso en marcha hacia su destino.
+
+
 >INITIVM:
+
 Tras un largo viaje, tu escuadron ha logrado llegar a la ladera de los Pirineos y se dispone a tomar el sendero mas cercano para poder atravesarlos pero, segun vais avanzando visualizais en medio del camino a un grupo de barbaros godos que no tardan demasiado en percatarse de vuestra presencia.
 En cuestion de segundos estais completamente rodeados, y la batalla se habria librado irremediablemente si no fuera porque uno de los guerreros enemigos decidio dejaros pasar si fuerais capaces de ayudarle con un problema:
+
 En nuestra tribu, tenemos tres lideres que son elegidos segun su fuerza, pero para evitar disputas entre ellos se le otorga mayor poder a aquel de mayor edad, quedando con menos poder el de menor edad.
 El problema es que no sabemos sus edades, pero si sabemos que Hernan tiene el doble de anios que Bertolfo, que Dagoberto tiene ahora la misma edad que las edades de Bertolfo en cinco anios y Herman en tres juntas. Ah, y Bertolfo nacio veinte años antes que yo, que tengo 37.
+
 Podrias decirme cual sera el poder de cada uno (teniendo en cuenta que el primero es el mayor)
+
 Primero:
 Segundo:
 Tercero:
+
 Los guerreros, asombrados por tu gran ingenio cumplen su parte del trato, abriendo el paso, por lo que procedeis a continuar con la travesia.
 Hace rato que dejasteis atras la entrada al sendero. Os encontrais en un camino angosto, rodeado por grandes muros de rocas, ascendiendo tediosamente hacia un lugar mas elevado cuando, de repente, os encontrais de frente una pared imposible de atravesar escalando al final del camino, y a uno de los lados, una pequenia estructura que un par de individuos estan usando para elevar una serie de objetos.Decidis acercaros, visto que parece ser la unica opcion para proseguir, es en ese momento, cuando os percatais que ambos estan discutiendo. Decides prestar atencion a su conversacion y, creyendote capaz de solucionar el problema, te acercas hacia ellos para ayudarles. El problema es el siguiente:
+
 Dos hombres llevan cajas desde el suelo a la cima. El hombre pequenio puede llevar dos cajas a la vez y tarda dos minutos en ascender por el elevador.
 El hombre grande solo puede llevar una caja a la vez debido a que el elevador no aguantaria mas peso, pero tarda 30 segundos en realizar la subida, ya que el pequenio tiene mucha mas fuerza.
 Cada uno tarda en bajar lo mismo que tarda en subir, y las cajas no pueden ir solas ya que de vez en cuando, el sistema se atasca y solo se puede arreglar desde la plataforma. Si hay 7 cajas en total, cuantos minutos tardaran en subirlas al segundo piso?
+
+
 Logras deducirles el tiempo que tardaran, por lo que acabas convenciendoles de que dejaros usar el elevador no les supondra retrasar la entrega y, a cambio de un poco de comida, os ayudan en la ascension.
 Al llegar a la cima, consigues ver a lo lejos un puente colgante, pero este esta custodiado por los tlictamidos. Visto que es la unica opcion, te armas de valor y decides adentrarte en su aldea, dejando a la espera a tus tropas. Te reciben los guardias, que no tardan en apresarte para llevarte ante el lider, que a pesar de la reputacion de la aldea, parece bastante razonable. Este escucha tu peticion y te propone un problema:
 Seis guerreros de su tribu se han sentado a la mesa para cenar (numerados del 1 al 6). El 1 es el de mayor rango y el 6, el de menor.
 Cada uno de ellos tiende a pelearse con aquel directamente mayor y menor que este y no puede sentarse a su lado, debido a que anteriormente eran lideres de aldeas enemigas. Ademas, los guerreros 3 y 5 discutieron el otro dia y se niegan a sentarse juntos.
 El guerrero 1 ya se ha sentado a la mesa y está esperando a los demás. Puedes sentarlos de forma que se mantenga la paz en la aldea?
+
+
 Excelente! El lider reconoce tu intelecto y procede a explicarte que, anteriormente el territorio estaba dominado por un gran tirano, que recientemente fue derrocado por estos seis guerreros, quienes mantenian la paz gracias al nuevo lider. Tras esta explicacion, el nuevo gobernador os premite pasar con la condicion de que limpieis la imagen de su pueblo.
 Gracias al puente, logras acortar enormemente el camino, por lo que, en cuestion de unos dias habeis atravesado por completo los pirineos, pero estais agotados, por lo que decidis descansar en una extrania taberna medio oculta en la niebla. Resulta que este establecimiento es el hogar del espiritu de un antiguo druida que, sabiendo vuestro objetivo tras leeros la mente, decide ayudaros con el viaje hacia Roma utilizando magia de teletransporte, pero para que considere que mereceis su poder, te propone un problema:
 En la taberna hay 22 velas encendidas. Una rafaga de viento que entra por la ventana apaga dos de esas velas. Al cabo de un rato te das cuenta de que se ha apagado otra vela. Para asegurarte de que no se apaga ninguna mas, cierras la ventana. En ese momento, el druida te asegura que el viento no apagara mas velas, cuantas velas te quedan al final?
+
+
 Efectivamente! El druida, sorprendido de que no hayas caido en su trampa, accede a teletransportaros a la capital.
 Cuando el hechizo termina, os encontrais ante una debastada y humeante Roma, en la que se halza en lo mas alto el estandarte de la legion demoniaca. Doloridos, aceptais la caida de la ciudad sin poder hacer nada, y os dirigis hacia la costa Este de la peninsula para embarcar hacia Constantinopla, capital del Imperio Oriental, pero la sensacion de derrota y los efectos del hechizo os han dejado sin apenas energias para continuar a pie. Por suerte, un agricultor que pasaba de camino con su carreta se compromete a llevaros como agradecimiento de lo que habiais hecho por el ya caido imperio. Durante el viaje y viendo que vuestro conductor se encontraba inquieto acerca de un problema personal, decides escucharle e intentas ayudarle como pago por su generosidad.
 Romulo y Remo, sus hijos, van a trabajar en una granja sembrando flores para los dioses. Se les ha asignado un terreno de 4 hectareas dividido por la mitad para que puedan trabajar de forma independiente. Remo empieza por el este y Romulo por el oeste. Romulo ara la tierra a un ritmo de 20 minutos por hectarea. Remo tarda 40 minutos, pero siembra tres veces más rápido que Romulo. Si se pagan 100 denarios por la siembra de un terreno de 4 hectareas, eque cantidad le correspondería a Remo?
+
+
 Cierto! Los dioses sin duda seran justos con sus hijos, por lo que el agricultor se queda relajado al fin y os deja en el puerto. Como agradecimiento, este habla con un capitan conocido para que os deje subir a su barco de forma gratuita. Pero para asegurarse de que de verdad eres un lider romano, decide ponerte a prueba justo antes del embarque.
 Hay 15 legionarios atrapadas a bordo de una galera que se va a hundir exactamente dentro de 20 minutos a causa del combate con otro navio enemigo. Por suerte, hay una isla no muy lejos y neptuno les ha otorgado a modo de compasion un bote indestructible, pero el bote solo tiene capacidad para cinco personas. Llegar nadando a la isla esta descartado: el mar esta cubierto de brea ardiendo, asi que solo queda la barca. Si un viaje de ida y vuelta a la isla con la barca lleva nueve minutos, cuantos legionarios viviran para ver tierra firme?
+
+
 Tristemente, ni siquiera los dioses pueden salvar a todo el mundo. El capitan confirma tras esto que su amigo decia la verdad y os deja subir.
 Durante la larga travesia, conoces a un comerciante en el barco que se compromete a llevarte hasta Constantinopla, pero te propone un juego, si logras resolver su acertijo, os guiara sin coste alguno pero, si fallas, tendras que pagarle. Aceptas aun sabiendo que no podras pagar en caso de fallar.
 El hombre saca un dado y empieza a tirarlo sobre una mesa. Cada vez que sale I, el dice 15; cada vez que sale VI, el dice 20; al final, lanza el dado y sale III. Entonces te pregunta cual sera el numero que hay que decir?
+
+
 Brillante! Se trataba de un truco que habia usado multiples veces en sus tratos y eras de los pocos que se habia dado cuenta. El comerciante se muestra satisfecho de vuestro encuentro y os acaba llevando gustoso a las puertas de la gran capital de la zona Oriental.
 Al entrar a la ciudad, os dirigis al palacio del rey bizantino, pero en la puerta uno de los guardias os impide pasar por motivos de seguridad. Por ello, le muestras la carta y al verla, el guardia te responde que esa carta fue entregada a un soldado de gran intelecto y que no tendra problemas en resolver el siguiente problema:
 Siete lunas despues de hace 70 lunas fue domingo. Entonces, que dia sera siete lunas antes de dentro de 70 lunas? (Ten en cuenta que los dioses no descartan las lunas nuevas y que cada dia pasado la luna es algo distinta de la anterior)
+
+
 _Sin duda eres el emisario_ Afirma el guardia mientras te lleva ante el rey. Una vez alli, este abre el manuscrito y te informa que segun un gran mago de Britania, la unica esperanza de proteger a los restos del Imperio de la devastacion, alguien debe intentar convencer al dios de la muerte Pluton que cree una barrera en las fronteras del territorio hasta que el caos desaparezca. Tras oir esto, tanto tu como tus tropas os ofreceis voluntarios para terminar la mision.
 El rey en persona os lleva a las mismisimas puertas del inframundo y convencio a sus guardias para que os dejaran pasar y os llevaran ante Pluton. Alli se encontraba el dios de los muertos, que tras ver las increibles hazanias realizadas por tu grupo, decide interesado darte una oportunidad mediante una temible prueba:
 Un antiguo rey griego acordo con Pluton que, a cambio de la inmortalidad, el cumpliria siempre con las peticiones impuestas por la deidad, por lo que se decidio que los requisitos serian los siguientes: Cada dia de la semana, el rey tendria que poner en la puerta de su casa un amuleto determinado para evitar que su alma cayera al inframundo. Lo malo era que, nada mas entregarle el del primer dia, Pluton le dijo que para saber cual era para cada dia, le tenia que pedir que lo marcase, pero tendria que pedirlo el minimo numero de veces posible, ya que al hacerlo cada vez, el dios lanzaria unos dados y, si salia el numero I, se llevaria su alma inmediatamente. Cuantos amuletos tendra que pedir que le marque Pluton para que siempre sepa cual poner en la puerta teniendo en cuenta que siempre va a saber cual es el primero?
+
+
 El dios, decepcionado, acepta costosamente la derrota y levanta la prometida barrera, protegiendo temporalmente a los ultimos refugios romanos.
 Tras esta gran victoria, nuestro decurion recibio todo tipo de homenajes y pudo retirarse a una Villa a las afueras de la ciudad, donde trabajara la tierra en paz junto con sus tropas hasta el final de sus dias.
