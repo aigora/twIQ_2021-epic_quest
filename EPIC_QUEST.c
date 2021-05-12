@@ -16,26 +16,19 @@ Javier Escudero García
 #define N 10000
 
 
+struct respuesta{
+char nresp1[N],nresp2[N],nresp3[N],nresp4[N],nresp5[N],nresp6[N],nresp7[N],nresp8[N],nresp9[N],nresp10[N];
+};
 
+void inicio();
+void intruciones();
+void caraacierto();
+void carafallo();
+void hack();
+void  vida(int vidas);
+void  moneda(int monedas);
+void estadisticas(char nombre[],int dimperso,char personaje[],int dimpers,int vidas, int monedas);
 
-
-void intruciones(){
-	printf("Las intrucciones y normas son básicas:\n");
-	printf("-El jugador ha de ir resolviendo una serie de preguntas para avanzar en la historia.\n");
-   	printf("-Se comienza con determinada vida y monedas, según el nivel de dificultad escogido.\n");
-  	printf("-Las monedas se pueden utilizar para comprar las soluciones a los acertijos,etc.\n");
-  	printf("-No esta permitido hacer trampas, el jugador obtendrá un fichero con sus estadísticas durante el juego.\n");
-  	printf("\n");
-}
-
-void hack(){
-	printf("¿Quiere activar alguno de estos hacks?\n");
-	printf("0=Inmortalidad (vidas y monedas infinitas)\n");
-    printf("1=Saltarse alguna parte (Introduzca el numero de la parte)\n");
-    printf("2=Ambos\n");
-    printf("3=Ninguno\n");
-
-}
 
 
 int main(){
@@ -43,45 +36,21 @@ int main(){
 	FILE*fhistoria,*flongitud;
 //función para poder implimir tildes, acentos y ñ
 	setlocale(LC_CTYPE, "Spanish");
-	system ("color 8F");
+	struct respuesta respuestas[2]={{"59","A","D","0","10"},{"59","A","D","0","10","104","1","V","2368","7"}};
 	char nombre[N],personaje[N],historia[N];
-	char espacios[N],final[N],respuesta[N];
-	int i,w=0,j,fin=0,jugadas=0,difi,vida,monedas,tamanoparte[N],part=0;
+	char espacios[N],final[N],respuesta[N],tienda[N]="tienda",respu[N];
+	int i,w=0,j,fin=0,jugadas=0,difi,vidas,monedas,tamanoparte[N],part=0,h;
 	int hacks,sal,saltar,partes[N];
 
 
 
 //Inicio
-	for(i=0;i<6;i++){
-		printf("---\t");
-	}
-	printf("\n");
-	for(i=0;i<5;i++){
-    		if(i==3){
-        		printf("| |             EPIC QUEST              | |\n");
-		}
-		printf("| |                                     | |\n");
-	}
-	for(i=0;i<6;i++){
-		printf("---\t");}
-	for(i=0;i<5;i++){
-		printf("\n");
-	}
-	printf("Para poder disfrutar de la experiencia, ponga el programa en pantalla completa\nEn windows con la tecla 'F11' o 'FN'+'F11' en caso de no funcionar la primera\n");
-	printf("Pulse enter para comenzar.\n");
-	gets(espacios);
-	system ("color 1A");
-	for(i=0;i<6000;i++){
-		printf("->\t");
-	}
-	printf(" \n");
-	printf(" \n");
-	system ("color 9E");
-
+inicio();
 	printf("Bienvenido jugador, introduzca su nombre:\n");
 	for(i=0;i<51;i++){
 		printf("\n");
 	}
+	fflush(stdin);
 	gets(nombre);
 	for(i=0;i<100;i++){
 		printf("\n");
@@ -129,6 +98,7 @@ int main(){
 		for(i=0;i<19;i++){
 			printf("\n");
 		}
+		fflush(stdin);
 		gets(personaje);
 		printf("¿Quiere leer las intrucciones y normas? (si/no)\n");
 		scanf("%s",respuesta);
@@ -146,19 +116,20 @@ int main(){
 		printf("(1)-->Dificultad1--> |Vida=5 corazones |Monedas=10|Otros=El personaje tiene .....,preguntas más fáciles,etc\n");
 		printf("(2)-->Dificultad2--> |Vida=3 corazones |Monedas=8|Otros=El personaje tiene .....\n");
 		scanf("%d",&difi);
+		w=0;
 		while (w==0){
 			switch (difi){
 				case 1:
-					if(j!=2){
-					vida=5;
+					if(h!=2){
+					vidas=5;
 			 		monedas=10;}
 			 		fhistoria=fopen("historia1.txt","r");
 		            flongitud=fopen("tamano1.txt","r");
 			 		w=1;
 		   			break;
 				case 2:
-					if(j!=2){
-			 		vida=3;
+					if(h!=2){
+			 		vidas=3;
 			 		monedas=8;}
 			 		fhistoria=fopen("historia2.txt","r");
 		            flongitud=fopen("tamano2.txt","r");
@@ -197,7 +168,6 @@ int main(){
 		system ("color 89");
 		printf("\n");
 		printf("\n");
-		fflush(stdin);
 		for(i=0;i<50;i++){
 			printf("\n");
 		}
@@ -210,6 +180,7 @@ int main(){
 		printf("--------------\n");
 
 		printf("Pulse enter para continuar:\n");
+		fflush(stdin);
 		gets(espacios);
 		
 		
@@ -222,18 +193,46 @@ int main(){
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
-
+		printf("Pulse enter para continuar:\n");
+		fflush(stdin);
+		gets(espacios);
 //parte 2
-		if (difi==4){
-			printf("%s",nombre);
-		}
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
 		}
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
-
+		printf("Introzuca aqui la respuesta:\n");
+        scanf("%s",respu);
+        i=0;
+        while (i==0&&vidas>0&&partes[saltar]==0){
+        if(strcmp(respu,respuestas[difi-1].nresp1)==0){
+ 	    caraacierto();
+ 	    i=1;
+        }
+        else{
+ 	    carafallo();
+ 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    vidas--;
+ 	    fflush(stdin);
+ 	    gets(respu);
+ 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
+		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp1);
+ 		monedas-=2;
+ 	    i=1;
+        }
+ 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 		printf("No le quedan monedas\n");
+ 	    } 
+        }
+        moneda(monedas);
+        vida(vidas);
+        printf("Pulse enter para continuar:\n");
+        fflush(stdin);
+        gets(espacios);
+        }
+ 
 //parte 3
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
@@ -241,14 +240,72 @@ int main(){
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
+		printf("Introzuca aqui la respuesta:\n");
+        scanf("%s",respu);
+        i=0;
+        while (i==0&&vidas>0&&partes[saltar]==0){
+        if(strcmp(respu,respuestas[difi-1].nresp2)==0){
+ 	    caraacierto();
+ 	    i=1;
+        }
+        else{
+ 	    carafallo();
+ 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    vidas--;
+ 	    scanf("%s",respu);
+ 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
+		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp2);
+ 		monedas-=2;
+ 	    i=1;
+        }
+ 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 		printf("No le quedan monedas\n");
+ 	    } 
+        }
+        moneda(monedas);
+        vida(vidas);
+        printf("Pulse enter para continuar:\n");
+        fflush(stdin);
+        gets(espacios);
+        }
 
 //parte 4
+
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
 		}
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
+		printf("Introzuca aqui la respuesta:\n");
+        scanf("%s",respu);
+        i=0;
+        while (i==0&&vidas>0&&partes[saltar]==0){
+        if(strcmp(respu,respuestas[difi-1].nresp3)==0){
+ 	    caraacierto();
+ 	    i=1;
+        }
+        else{
+ 	    carafallo();
+ 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    vidas--;
+ 	    scanf("%s",respu);
+ 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
+		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp3);
+ 		monedas-=2;
+ 	    i=1;
+        }
+ 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 		printf("No le quedan monedas\n");
+ 	    } 
+        }
+        moneda(monedas);
+        vida(vidas);
+        printf("Pulse enter para continuar:\n");
+        fflush(stdin);
+        gets(espacios);
+        }
+        
 
 //parte 5
 		for(i=0;i<tamanoparte[part];i++){
@@ -257,6 +314,36 @@ int main(){
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
+		printf("Introzuca aqui la respuesta:\n");
+        scanf("%s",respu);
+        i=0;
+        while (i==0&&vidas>0&&partes[saltar]==0){
+        if(strcmp(respu,respuestas[difi-1].nresp4)==0){
+ 	    caraacierto();
+ 	    i=1;
+        }
+        else{
+ 	    carafallo();
+ 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    vidas--;
+ 	    scanf("%s",respu);
+ 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
+		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp4);
+ 		monedas-=2;
+ 	    i=1;
+        }
+ 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 		printf("No le quedan monedas\n");
+ 	    } 
+        }
+        moneda(monedas);
+        vida(vidas);
+        printf("Pulse enter para continuar:\n");
+        fflush(stdin);
+        gets(espacios);
+        }
+        
+
 
 //parte 6
 		for(i=0;i<tamanoparte[part];i++){
@@ -265,6 +352,35 @@ int main(){
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
+		printf("Introzuca aqui la respuesta:\n");
+        scanf("%s",respu);
+        i=0;
+        while (i==0&&vidas>0&&partes[saltar]==0){
+        if(strcmp(respu,respuestas[difi-1].nresp5)==0){
+ 	    caraacierto();
+ 	    i=1;
+        }
+        else{
+ 	    carafallo();
+ 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    vidas--;
+ 	    scanf("%s",respu);
+ 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
+		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp5);
+ 		monedas-=2;
+ 	    i=1;
+        }
+ 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 		printf("No le quedan monedas\n");
+ 	    } 
+        }
+        moneda(monedas);
+        vida(vidas);
+        }
+        printf("Pulse enter para continuar:\n");
+        fflush(stdin);
+        gets(espacios);
+
 
 //parte 7
 		for(i=0;i<tamanoparte[part];i++){
@@ -273,6 +389,36 @@ int main(){
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
+		printf("Introzuca aqui la respuesta:\n");
+        scanf("%s",respu);
+        i=0;
+        while (i==0&&vidas>0&&partes[saltar]==0){
+        if(strcmp(respu,respuestas[difi-1].nresp6)==0){
+ 	    caraacierto();
+ 	    i=1;
+        }
+        else{
+ 	    carafallo();
+ 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    vidas--;
+ 	    scanf("%s",respu);
+ 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
+		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp6);
+ 		monedas-=2;
+ 	    i=1;
+        }
+ 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 		printf("No le quedan monedas\n");
+ 	    } 
+        }
+        moneda(monedas);
+        vida(vidas);
+        printf("Pulse enter para continuar:\n");
+        fflush(stdin);
+        gets(espacios);
+        }
+
+
 
 //parte 8
 		for(i=0;i<tamanoparte[part];i++){
@@ -281,6 +427,35 @@ int main(){
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
+				printf("Introzuca aqui la respuesta:\n");
+        scanf("%s",respu);
+        i=0;
+        while (i==0&&vidas>0&&partes[saltar]==0){
+        if(strcmp(respu,respuestas[difi-1].nresp7)==0){
+ 	    caraacierto();
+ 	    i=1;
+        }
+        else{
+ 	    carafallo();
+ 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    vidas--;
+ 	    scanf("%s",respu);
+ 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
+		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp7);
+ 		monedas-=2;
+ 	    i=1;
+        }
+ 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 		printf("No le quedan monedas\n");
+ 	    } 
+        }
+        moneda(monedas);
+        vida(vidas);
+        }
+        printf("Pulse enter para continuar:\n");
+        fflush(stdin);
+        gets(espacios);
+
 
 //parte 9
 		for(i=0;i<tamanoparte[part];i++){
@@ -289,6 +464,35 @@ int main(){
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
+		printf("Introzuca aqui la respuesta:\n");
+        scanf("%s",respu);
+        i=0;
+        while (i==0&&vidas>0&&partes[saltar]==0){
+        if(strcmp(respu,respuestas[difi-1].nresp8)==0){
+ 	    caraacierto();
+ 	    i=1;
+        }
+        else{
+ 	    carafallo();
+ 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    vidas--;
+ 	    scanf("%s",respu);
+ 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
+		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp8);
+ 		monedas-=2;
+ 	    i=1;
+        }
+ 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 		printf("No le quedan monedas\n");
+ 	    } 
+        }
+        moneda(monedas);
+        vida(vidas);
+        printf("Pulse enter para continuar:\n");
+        fflush(stdin);
+        gets(espacios);
+        }
+
 
 //parte 10
 		for(i=0;i<tamanoparte[part];i++){
@@ -297,6 +501,34 @@ int main(){
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
+		printf("Introzuca aqui la respuesta:\n");
+        scanf("%s",respu);
+        i=0;
+        while (i==0&&vidas>0&&partes[saltar]==0){
+        if(strcmp(respu,respuestas[difi-1].nresp9)==0){
+ 	    caraacierto();
+ 	    i=1;
+        }
+        else{
+ 	    carafallo();
+ 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    vidas--;
+ 	    scanf("%s",respu);
+ 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
+		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp9);
+ 		monedas-=2;
+ 	    i=1;
+        }
+ 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 		printf("No le quedan monedas\n");
+ 	    } 
+        }
+        moneda(monedas);
+        vida(vidas);
+        printf("Pulse enter para continuar:\n");
+        fflush(stdin);
+        gets(espacios);
+        }
 
 //parte 11
 		for(i=0;i<tamanoparte[part];i++){
@@ -305,6 +537,34 @@ int main(){
 		j=j+tamanoparte[part];
 		part++;
 		printf("\n");
+		printf("Introzuca aqui la respuesta:\n");
+        scanf("%s",respu);
+        i=0;
+        while (i==0&&vidas>0&&partes[saltar]==0){
+        if(strcmp(respu,respuestas[difi-1].nresp10)==0){
+ 	    caraacierto();
+ 	    i=1;
+        }
+        else{
+ 	    carafallo();
+ 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    vidas--;
+ 	    scanf("%s",respu);
+ 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
+		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp10);
+ 		monedas-=2;
+ 	    i=1;
+        }
+ 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 		printf("No le quedan monedas\n");
+ 	    } 
+        }
+        moneda(monedas);
+        vida(vidas);
+        printf("Pulse enter para continuar:\n");
+        fflush(stdin);
+        gets(espacios);
+        }
 
 //parte 12
 		for(i=0;i<tamanoparte[part];i++){
@@ -312,14 +572,23 @@ int main(){
 		}
 		j=j+tamanoparte[part];
 		part++;
-		printf("\n");
-
+		printf("\n");    
+		fflush(stdin);
 		gets(espacios);
 
+
+
+
 //fin 
-
-
-
+        if(vidas==0){
+        	printf("GAME OVER, %s\n",nombre);
+        	printf("GAME OVER %s\n",nombre);
+        	printf("GAME OVER %s\n",nombre);
+        	printf("Los creadores le vendimos :D \n");
+        	printf("Pulse enter para continuar");
+            fflush(stdin);
+            gets(espacios);
+        }
 
 
 
@@ -338,14 +607,14 @@ int main(){
 		 	if (jugadas==1){
 		 		printf("Por haber jugado honestamente la primera vez, le concedemos una serie de hacks.\n");}
 		 		w=0;
-		 		while (j==0){
+		 		while (h==0){
 		 			hack();
 		 			scanf("%d",&hacks);
 		 			switch (hacks){
 		 				case 0:
-		 					monedas=100000;
-		 					vida=100000;
-		 					j=1;
+		 					monedas=100;
+		 					vidas=100;
+		 					h=1;
 
 		 				case 1:
 		 					printf("¿Cuántas partes quiere saltar?\n");
@@ -355,11 +624,11 @@ int main(){
 		 		     			scanf("%d",&saltar);
 		 		     			partes[saltar]=1;
 				 			}
-				 			j=2;
+				 			h=2;
 
 		    			case 2:
-		    				monedas=100000;
-		 					vida=100000;
+		    				monedas=100;
+		 					vidas=100;
 		 					printf("¿Cuántas partes quiere saltar?\n");
                 			scanf("%d",&sal);
                 			for (i=0;i<sal;i++){
@@ -367,17 +636,118 @@ int main(){
 		 		     			scanf("%d",&saltar);
 		 		     			partes[saltar]=1;
 				 			}
-				 			j=1;
+				 			h=1;
 		    			case 3:
 		   	     			printf("Gracias por no usar hacks :D .\n");
-		   	     			j=2;
+		   	     			h=2;
 					}
 				}
 				j=0;
 				part=0;
 		}
-	
+	estadisticas(nombre,100,personaje,100,vidas,monedas);
 	} while(fin==0);
 	
 	return 0;
+}
+
+
+
+void inicio(){
+	int i;
+	char espacios[N];
+system ("color 8F");
+//Inicio
+	for(i=0;i<6;i++){
+		printf("---\t");
+	}
+	printf("\n");
+	for(i=0;i<5;i++){
+    		if(i==3){
+        		printf("| |             EPIC QUEST              | |\n");
+		}
+		printf("| |                                     | |\n");
+	}
+	for(i=0;i<6;i++){
+		printf("---\t");}
+	for(i=0;i<5;i++){
+		printf("\n");
+	}
+	printf("Para poder disfrutar de la experiencia, ponga el programa en pantalla completa\nEn windows con la tecla 'F11' o 'FN'+'F11' en caso de no funcionar la primera\n");
+	printf("Pulse enter para comenzar.\n");
+	gets(espacios);
+	system ("color 1A");
+	for(i=0;i<6000;i++){
+		printf("->\t");
+	}
+	printf(" \n");
+	printf(" \n");
+	system ("color 9E");
+}
+
+
+
+
+
+void intruciones(){
+	printf("Las intrucciones y normas son básicas:\n");
+	printf("-El jugador ha de ir resolviendo una serie de preguntas para avanzar en la historia.\n");
+   	printf("-Se comienza con determinada vida y monedas, según el nivel de dificultad escogido.\n");
+  	printf("-Las monedas se pueden utilizar para comprar las soluciones a los acertijos,etc.\n");
+  	printf("-No esta permitido hacer trampas, el jugador obtendrá un fichero con sus estadísticas durante el juego.\n");
+  	printf("\n");
+}
+
+void caraacierto(){
+	printf("La solución es correcta\n");
+	printf("----------\n");
+	printf("|o      o|\n");
+    printf("|    L   |\n");
+    printf("|    D   |\n");
+    printf("----------\n");
+    printf("Prosigamos con la aventura\n");
+ 	printf("\n");
+}
+void carafallo(){
+	printf("La solución es incorrecta\n");
+	printf("----------\n");
+	printf("|º      º|\n");
+    printf("|    C   |\n");
+    printf("|    o   |\n");
+    printf("----------\n");
+ 	printf("\n");
+}
+
+void hack(){
+	printf("¿Quiere activar alguno de estos hacks?\n");
+	printf("0=Inmortalidad (vidas y monedas infinitas)\n");
+    printf("1=Saltarse alguna parte (Introduzca el numero de la parte)\n");
+    printf("2=Ambos\n");
+    printf("3=Ninguno\n");
+}
+void  vida(int vidas){
+	char i,j=3;
+	printf("\n");
+	printf("-Le quedan %d vidas.\n",vidas);
+	for (i=0;i<vidas;i++){
+		printf("%c\t",j);
+	}
+	printf("\n");
+
+}
+void  moneda(int monedas){
+	char i,j=169;
+	printf("\n");
+	printf("-Le quedan %d monedas.\n",monedas);
+	for (i=0;i<monedas;i++){
+		printf("%c\t",j);
+	}
+	printf("\n");
+
+}
+void estadisticas(char nombre[],int dimperso,char personaje[],int dimpers,int vidas, int monedas){
+	FILE*festadistica;
+	festadistica=fopen("ESTADISTICASEPICQUEST.txt","a");
+	fprintf(festadistica, "Usuario: %s | Personaje escogido: %s | Vidas restantes: %d |Monedas no utilizadas: %d | ",nombre,personaje,vidas,monedas);
+	fclose(festadistica);
 }
