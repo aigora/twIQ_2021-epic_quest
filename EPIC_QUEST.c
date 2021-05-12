@@ -113,8 +113,8 @@ inicio();
 
 		printf(" ");
 		printf("Escoja el nivel de dificultad que desea:\n");
-		printf("(1)-->Dificultad1--> |Vida=5 corazones |Monedas=10|Otros=El personaje tiene .....,preguntas más fáciles,etc\n");
-		printf("(2)-->Dificultad2--> |Vida=3 corazones |Monedas=8|Otros=El personaje tiene .....\n");
+		printf("(1)-->Historia1--> |Vida=5 corazones |Monedas=10|El protagonista se enfrenta a diversos problemas durante la caida de la antigua Roma\n");
+		printf("(2)-->Historia2--> |Vida=3 corazones |Monedas=8|El protagonista se ve encerrado en una ciudad distopica que pocos pueden siquiera imaginar\n");
 		scanf("%d",&difi);
 		w=0;
 		while (w==0){
@@ -234,6 +234,7 @@ inicio();
         }
  
 //parte 3
+		while (vidas!=0) {
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
 		}
@@ -270,9 +271,9 @@ inicio();
         }
 
 //parte 4
-
+		while (vidas!=0) {
 		for(i=0;i<tamanoparte[part];i++){
-			printf("%c",historia[j+i]);
+		printf("%c",historia[j+i]);
 		}
 		j=j+tamanoparte[part];
 		part++;
@@ -308,6 +309,7 @@ inicio();
         
 
 //parte 5
+		while (vidas!=0) {
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
 		}
@@ -346,6 +348,7 @@ inicio();
 
 
 //parte 6
+		while (vidas!=0) {
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
 		}
@@ -383,6 +386,7 @@ inicio();
 
 
 //parte 7
+		while (vidas!=0) {
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
 		}
@@ -421,6 +425,7 @@ inicio();
 
 
 //parte 8
+		while (vidas!=0) {
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
 		}
@@ -458,6 +463,7 @@ inicio();
 
 
 //parte 9
+		while (vidas!=0) {
 		for(i=0;i<tamanoparte[part];i++){
 		printf("%c",historia[j+i]);
 		}
@@ -495,6 +501,7 @@ inicio();
 
 
 //parte 10
+		while (vidas!=0) {
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
 		}
@@ -531,6 +538,7 @@ inicio();
         }
 
 //parte 11
+		while (vidas!=0) {
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
 		}
@@ -567,6 +575,7 @@ inicio();
         }
 
 //parte 12
+		while (vidas!=0) {
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
 		}
@@ -575,7 +584,7 @@ inicio();
 		printf("\n");    
 		fflush(stdin);
 		gets(espacios);
-
+		}}}}}}}}}}
 
 
 
