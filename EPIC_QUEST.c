@@ -25,8 +25,10 @@ void intruciones();
 void caraacierto();
 void carafallo();
 void hack();
-void  vida(int vidas);
-void  moneda(int monedas);
+void vida(int vidas);
+void moneda(int monedas);
+void partidaganper(int vidas,char nombre[]);
+void clases();
 void estadisticas(char nombre[],int dimperso,char personaje[],int dimpers,int vidas, int monedas);
 
 
@@ -36,7 +38,7 @@ int main(){
 	FILE*fhistoria,*flongitud;
 //función para poder implimir tildes, acentos y ñ
 	setlocale(LC_CTYPE, "Spanish");
-	struct respuesta respuestas[2]={{"59","A","D","0","10"},{"59","A","D","0","10","104","1","V","2368","7"}};
+	struct respuesta respuestas[2]={{"DagobertoHernanBertolfo","13","1,3,6,4,2,5","3","50","10","17","domingo","5"},{"59","A","D","0","10","104","1","V","2368","7"}};
 	char nombre[N],personaje[N],historia[N];
 	char espacios[N],final[N],respuesta[N],tienda[N]="tienda",respu[N];
 	int i,w=0,j,fin=0,jugadas=0,difi,vidas,monedas,tamanoparte[N],part=0,h;
@@ -63,36 +65,7 @@ inicio();
 		
 		printf("%s, escoja el personaje que quiere ser:\n",nombre);
 
-		printf("||           Caballero           ||             Hada              ||            Sabio              ||            Juglar             ||           Nigromante          ||           Personal            ||\n");
-		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
-		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
-		printf("|| *Símbolo de poder y gloria,*  ||    *Antigua protectora de*    ||      *Máximo referente*       ||     *Por todos conocido,*     ||   *Un ser que ya ni humano*   ||    Muy pocos pueden llegar    ||\n"); 
-		printf("||*portador de la antigua espada*||   *bosques  y manantiales,*   || *de intelectuales y líderes,* || *aquel que por los senderos*  ||     *puede considerarse,*     ||    a ser grandes leyendas,    ||\n");
-		printf("||         *de Drogmagt,*        ||        *venerada por*         || *legendario investigador con* ||   *deleita nuestros oídos*    || *inmoral,  ambicioso y ajeno* ||     pero todos  deberían      ||\n");
-		printf("|| *aquel que salió victorioso*  ||    *numerosas creencias,*     ||*innumerables  descubrimientos*|| *a cambio  de buen alimento,* || *a los principios naturales.* ||    tener una  oportunidad     ||\n");
-		printf("|| *de múltiples y legendarias*  || *aquella llamada  por muchos* ||        *a su espalda,*        ||   *y que por  algún cobijo*   ||Protagonista de temibles actos,||   para intentar  igualarse    ||\n");
-		printf("||         *contiendas.*         ||  *como descendiente directa*  ||    *genio tras varios de*     ||      *narra los eventos*      || difunde su  doctrina a la par ||    a estos seres míticos.     ||\n");
-		printf("||                               ||    *de los mismos dioses*     ||    *los grandes  avances*     ||    *de parajes escondidos*    ||que estudia las  bases de todo,||                               ||\n");
-		printf("||                               ||      *de la naturaleza.*      ||  *tecnológicos del momento.*  ||   *mientras juntos bebemos.*  || incluso dañándose a sí mismo. ||                               ||\n");
-		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
-		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
-		printf("||      Aunque el caballero      || Es bien sabido  que las hadas || Tras tantos años de estudios, ||  Toda una vida entreteniendo  ||  Desde que magia  y alquimia  ||No eres un gran ser legendario,||\n");
-		printf("||     sea  reconocido  como     ||   son seres de corazón puro   ||este  anciano de frágil aspecto||     a todo tipo de seres      || alquimia fueron descubiertas, ||       ni mucho menos,         ||\n");
-		printf("||    un héroe  entre  héroes    ||   y pensamiento  bondadoso,   ||     logró la elaboración      ||  a lo largo  del basto mundo  ||   no fueron  pocos los que    ||     apenas has salido de      ||\n");
-		printf("||   debido a sus  increíbles    ||  por lo que suelen despertar  ||         de un hechizo         || le han servido a este artista ||quisieron explorar sus límites,||       tu propia aldea,        ||\n");
-		printf("||     capacidades físicas,      ||  la piedad  tanto de aliados  || que le permitió  sobrevivir a ||   para obtener  suficientes   ||          ignorando            ||   pero esto no  te arrebata   ||\n");
-		printf("|| también es de sobra conocido  ||       como de enemigos.       ||  a todo tipo de enfermedades, ||   conocimientos acerca del    ||  cualquier  principio moral.  ||     la ilusión de avanzar,    ||\n");
-		printf("|| su  mal humor y su facilidad  ||    Debido a su naturaleza,    ||volviéndolo parcialmente inmune||   correcto establecimiento    ||Uno de ellos destacó del resto,||así que te  dispones a afrontar||\n");
-		printf("||     para la creación de       ||   no posee gran resistencia   ||      al paso del tiempo.      || de relaciones con casi todos. ||         descubriendo          ||una nueva y peligrosa  aventura||\n");
-		printf("||   conflictos innecesarios.    || ante  ningún  tipo de ataque, ||   Su costumbre de aislarse    ||            Además,            ||principios  profundos y oscuros||    de la que  nadie espera    ||\n");
-		printf("||                               ||  pero esto queda compensado   || en sus estudios pudo volverle ||   la experiencia  obtenida    ||del mundo y su  funcionamiento,||      que salgas con vida.     ||\n");
-		printf("||                               || con su capacidad de curación. || el más inteligente del mundo, ||   durante todos sus viajes    || permitiéndole  incluso evitar ||   (Esto es el modo difícil)   ||\n");
-		printf("||                               ||                               ||    pero su escasa relación    ||   hacia parajes inhóspitos    ||   daños o incluso la muerte   ||     (por si no se nota XD)    ||\n");
-		printf("||                               ||                               || con otros  seres lo ha vuelto ||   le ha servido para saber    ||  gracias a su  magia arcana.  ||                               ||\n");
-		printf("||                               ||                               ||      odioso e irritante.      ||     reaccionar mejor ante     ||                               ||                               ||\n");
-		printf("||                               ||                               ||                               ||   las  peores  situaciones.   ||                               ||                               ||\n");
-		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
-		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
+		clases();
 
 //modificar
 		for(i=0;i<19;i++){
@@ -208,254 +181,253 @@ inicio();
         i=0;
         while (i==0&&vidas>0&&partes[saltar]==0){
         if(strcmp(respu,respuestas[difi-1].nresp1)==0){
- 	    caraacierto();
- 	    i=1;
-        }
-        else{
- 	    carafallo();
- 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    vidas--;
- 	    fflush(stdin);
- 	    gets(respu);
- 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
-		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp1);
- 		monedas-=2;
- 	    i=1;
-        }
- 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
- 		printf("No le quedan monedas\n");
- 	    } 
-        }
-        moneda(monedas);
-        vida(vidas);
-        printf("Pulse enter para continuar:\n");
-        fflush(stdin);
-        gets(espacios);
+ 	    	caraacierto();
+ 	    	i=1;
+        } else{
+ 	    	carafallo();
+ 	    	printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    	vidas--;
+ 	    	fflush(stdin);
+ 	    	gets(respu);
+ 	    		if (strcmp(respu,tienda)==0&&(monedas>0)){
+					printf("La solución comprada es: %s\n",respuestas[difi-1].nresp1);
+ 					monedas-=2;
+ 	    			i=1;
+        		}
+ 	    		if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 					printf("No le quedan monedas\n");
+ 	    		} 
+        	}
+        	moneda(monedas);
+        	vida(vidas);
+        	printf("Pulse enter para continuar:\n");
+        	fflush(stdin);
+        	gets(espacios);
         }
  
 //parte 3
-		while (vidas!=0) {
-		for(i=0;i<tamanoparte[part];i++){
-			printf("%c",historia[j+i]);
-		}
-		j=j+tamanoparte[part];
-		part++;
-		printf("\n");
-		printf("Introzuca aqui la respuesta:\n");
-        scanf("%s",respu);
-        i=0;
-        while (i==0&&vidas>0&&partes[saltar]==0){
-        if(strcmp(respu,respuestas[difi-1].nresp2)==0){
- 	    caraacierto();
- 	    i=1;
-        }
-        else{
- 	    carafallo();
- 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    vidas--;
- 	    scanf("%s",respu);
- 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
-		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp2);
- 		monedas-=2;
- 	    i=1;
-        }
- 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
- 		printf("No le quedan monedas\n");
- 	    } 
-        }
-        moneda(monedas);
-        vida(vidas);
-        printf("Pulse enter para continuar:\n");
-        fflush(stdin);
-        gets(espacios);
-        }
+		if (vidas!=0){
+			for(i=0;i<tamanoparte[part];i++){
+				printf("%c",historia[j+i]);
+			}
+			j=j+tamanoparte[part];
+			part++;
+			printf("\n");
+			printf("Introzuca aqui la respuesta:\n");
+    	    scanf("%s",respu);
+    	    i=0;
+    	    while (i==0&&vidas>0&&partes[1]==0){
+    		    if(strcmp(respu,respuestas[difi-1].nresp2)==0){
+ 				    caraacierto();
+ 				    i=1;
+     		   } else{
+ 	    			carafallo();
+ 	    			printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    			vidas--;
+ 	    			scanf("%s",respu);
+ 	    			if (strcmp(respu,tienda)==0&&(monedas>0)){
+						printf("La solución comprada es: %s\n",respuestas[difi-1].nresp2);
+ 						monedas-=2;
+ 	    				i=1;
+        			}
+ 	    			if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 						printf("No le quedan monedas\n");
+ 	    			} 
+        		}
+        		moneda(monedas);
+        		vida(vidas);
+        		printf("Pulse enter para continuar:\n");
+        		fflush(stdin);
+        		gets(espacios);
+        	}
 
 //parte 4
-		while (vidas!=0) {
-		for(i=0;i<tamanoparte[part];i++){
-		printf("%c",historia[j+i]);
-		}
-		j=j+tamanoparte[part];
-		part++;
-		printf("\n");
-		printf("Introzuca aqui la respuesta:\n");
-        scanf("%s",respu);
-        i=0;
-        while (i==0&&vidas>0&&partes[saltar]==0){
-        if(strcmp(respu,respuestas[difi-1].nresp3)==0){
- 	    caraacierto();
- 	    i=1;
-        }
-        else{
- 	    carafallo();
- 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    vidas--;
- 	    scanf("%s",respu);
- 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
-		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp3);
- 		monedas-=2;
- 	    i=1;
-        }
- 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
- 		printf("No le quedan monedas\n");
- 	    } 
-        }
-        moneda(monedas);
-        vida(vidas);
-        printf("Pulse enter para continuar:\n");
-        fflush(stdin);
-        gets(espacios);
-        }
+		if (vidas!=0){
+
+			for(i=0;i<tamanoparte[part];i++){
+				printf("%c",historia[j+i]);
+			}
+			j=j+tamanoparte[part];
+			part++;
+			printf("\n");
+			printf("Introzuca aqui la respuesta:\n");
+     	   	scanf("%s",respu);
+    	    i=0;
+    	    while (i==0&&vidas>0&&partes[2]==0){
+        		if(strcmp(respu,respuestas[difi-1].nresp3)==0){
+ 	    			caraacierto();
+ 	    			i=1;
+    		    } else{
+ 	    			carafallo();
+ 	    			printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    			vidas--;
+ 	    			scanf("%s",respu);
+ 	    			if (strcmp(respu,tienda)==0&&(monedas>0)){
+						printf("La solución comprada es: %s\n",respuestas[difi-1].nresp3);
+ 						monedas-=2;
+ 	    				i=1;
+        			}
+ 	    			if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 						printf("No le quedan monedas\n");
+ 	    			} 
+        		}
+        		moneda(monedas);
+        		vida(vidas);
+        		printf("Pulse enter para continuar:\n");
+        		fflush(stdin);
+        		gets(espacios);
+        	}
         
 
 //parte 5
-		while (vidas!=0) {
-		for(i=0;i<tamanoparte[part];i++){
-			printf("%c",historia[j+i]);
-		}
-		j=j+tamanoparte[part];
-		part++;
-		printf("\n");
-		printf("Introzuca aqui la respuesta:\n");
-        scanf("%s",respu);
-        i=0;
-        while (i==0&&vidas>0&&partes[saltar]==0){
-        if(strcmp(respu,respuestas[difi-1].nresp4)==0){
- 	    caraacierto();
- 	    i=1;
-        }
-        else{
- 	    carafallo();
- 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    vidas--;
- 	    scanf("%s",respu);
- 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
-		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp4);
- 		monedas-=2;
- 	    i=1;
-        }
- 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
- 		printf("No le quedan monedas\n");
- 	    } 
-        }
-        moneda(monedas);
-        vida(vidas);
-        printf("Pulse enter para continuar:\n");
-        fflush(stdin);
-        gets(espacios);
+		if (vidas!=0){
+
+			for(i=0;i<tamanoparte[part];i++){
+				printf("%c",historia[j+i]);
+			}
+			j=j+tamanoparte[part];
+			part++;
+			printf("\n");
+			printf("Introzuca aqui la respuesta:\n");
+     	    scanf("%s",respu);
+     	    i=0;
+        	while (i==0&&vidas>0&&partes[3]==0){
+    	 	   if(strcmp(respu,respuestas[difi-1].nresp4)==0){
+ 	    		caraacierto();
+ 	    		i=1;
+        	} else{
+ 	    		carafallo();
+ 	    		printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    		vidas--;
+ 	    		scanf("%s",respu);
+ 	    		if (strcmp(respu,tienda)==0&&(monedas>0)){
+					printf("La solución comprada es: %s\n",respuestas[difi-1].nresp4);
+ 					monedas-=2;
+ 	    			i=1;
+        		}
+ 	   			if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 					printf("No le quedan monedas\n");
+ 	    		} 
+        	}
+        	moneda(monedas);
+        	vida(vidas);
+        	printf("Pulse enter para continuar:\n");
+        	fflush(stdin);
+        	gets(espacios);
         }
         
 
 
 //parte 6
-		while (vidas!=0) {
-		for(i=0;i<tamanoparte[part];i++){
-			printf("%c",historia[j+i]);
-		}
-		j=j+tamanoparte[part];
-		part++;
-		printf("\n");
-		printf("Introzuca aqui la respuesta:\n");
-        scanf("%s",respu);
-        i=0;
-        while (i==0&&vidas>0&&partes[saltar]==0){
-        if(strcmp(respu,respuestas[difi-1].nresp5)==0){
- 	    caraacierto();
- 	    i=1;
-        }
-        else{
- 	    carafallo();
- 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    vidas--;
- 	    scanf("%s",respu);
- 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
-		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp5);
- 		monedas-=2;
- 	    i=1;
-        }
- 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
- 		printf("No le quedan monedas\n");
- 	    } 
-        }
-        moneda(monedas);
-        vida(vidas);
-        }
-        printf("Pulse enter para continuar:\n");
-        fflush(stdin);
-        gets(espacios);
+		if (vidas!=0){
+
+			for(i=0;i<tamanoparte[part];i++){
+				printf("%c",historia[j+i]);
+			}
+			j=j+tamanoparte[part];
+			part++;
+			printf("\n");
+			printf("Introzuca aqui la respuesta:\n");
+        	scanf("%s",respu);
+    	    i=0;
+    	    while (i==0&&vidas>0&&partes[4]==0){
+     		   if(strcmp(respu,respuestas[difi-1].nresp5)==0){
+ 					caraacierto();
+ 	    			i=1;
+       			} else{
+ 	    			carafallo();
+ 	    			printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    			vidas--;
+ 	    			scanf("%s",respu);
+ 	    			if (strcmp(respu,tienda)==0&&(monedas>0)){
+						printf("La solución comprada es: %s\n",respuestas[difi-1].nresp5);
+ 						monedas-=2;
+ 	    				i=1;
+        			}
+ 	    			if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 						printf("No le quedan monedas\n");
+ 	   				} 
+        		}
+        		moneda(monedas);
+        		vida(vidas);
+        		printf("Pulse enter para continuar:\n");
+        		fflush(stdin);
+        		gets(espacios);
+        	}
+        	
 
 
 //parte 7
-		while (vidas!=0) {
-		for(i=0;i<tamanoparte[part];i++){
-			printf("%c",historia[j+i]);
-		}
-		j=j+tamanoparte[part];
-		part++;
-		printf("\n");
-		printf("Introzuca aqui la respuesta:\n");
-        scanf("%s",respu);
-        i=0;
-        while (i==0&&vidas>0&&partes[saltar]==0){
-        if(strcmp(respu,respuestas[difi-1].nresp6)==0){
- 	    caraacierto();
- 	    i=1;
-        }
-        else{
- 	    carafallo();
- 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    vidas--;
- 	    scanf("%s",respu);
- 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
-		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp6);
- 		monedas-=2;
- 	    i=1;
-        }
- 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
- 		printf("No le quedan monedas\n");
- 	    } 
-        }
-        moneda(monedas);
-        vida(vidas);
-        printf("Pulse enter para continuar:\n");
-        fflush(stdin);
-        gets(espacios);
-        }
+		if (vidas!=0){
 
+			for(i=0;i<tamanoparte[part];i++){
+				printf("%c",historia[j+i]);
+			}
+			j=j+tamanoparte[part];
+			part++;
+			printf("\n");
+			printf("Introzuca aqui la respuesta:\n");
+        	scanf("%s",respu);
+        	i=0;
+        	while (i==0&&vidas>0&&partes[5]==0){
+    		    if(strcmp(respu,respuestas[difi-1].nresp6)==0){
+ 				    caraacierto();
+ 				    i=1;
+     		    } else{
+ 	    			carafallo();
+ 	    			printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    			vidas--;
+ 	    			scanf("%s",respu);
+ 	    			if (strcmp(respu,tienda)==0&&(monedas>0)){
+						printf("La solución comprada es: %s\n",respuestas[difi-1].nresp6);
+ 						monedas-=2;
+ 	    				i=1;
+        			}
+ 	    			if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 						printf("No le quedan monedas\n");
+ 	    			} 
+        		}
+        		moneda(monedas);
+        		vida(vidas);
+        		printf("Pulse enter para continuar:\n");
+        		fflush(stdin);
+        		gets(espacios);
+        	}
+			
 
 
 //parte 8
-		while (vidas!=0) {
-		for(i=0;i<tamanoparte[part];i++){
-			printf("%c",historia[j+i]);
-		}
-		j=j+tamanoparte[part];
-		part++;
-		printf("\n");
-				printf("Introzuca aqui la respuesta:\n");
-        scanf("%s",respu);
-        i=0;
-        while (i==0&&vidas>0&&partes[saltar]==0){
-        if(strcmp(respu,respuestas[difi-1].nresp7)==0){
- 	    caraacierto();
- 	    i=1;
-        }
-        else{
- 	    carafallo();
- 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    vidas--;
- 	    scanf("%s",respu);
- 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
-		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp7);
- 		monedas-=2;
- 	    i=1;
-        }
- 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
- 		printf("No le quedan monedas\n");
- 	    } 
-        }
-        moneda(monedas);
-        vida(vidas);
+		if (vidas!=0){
+
+			for(i=0;i<tamanoparte[part];i++){
+				printf("%c",historia[j+i]);
+			}
+			j=j+tamanoparte[part];
+			part++;
+			printf("\n");
+			printf("Introzuca aqui la respuesta:\n");
+        	scanf("%s",respu);
+        	i=0;
+        	while (i==0&&vidas>0&&partes[6]==0){
+        	if(strcmp(respu,respuestas[difi-1].nresp7)==0){
+ 			    caraacierto();
+ 			    i=1;
+        	} else{
+ 	    		carafallo();
+ 	    		printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    		vidas--;
+ 	    		scanf("%s",respu);
+ 	    		if (strcmp(respu,tienda)==0&&(monedas>0)){
+					printf("La solución comprada es: %s\n",respuestas[difi-1].nresp7);
+ 					monedas-=2;
+ 	    			i=1;
+        		}
+ 	    		if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 					printf("No le quedan monedas\n");
+ 	    		} 
+        	}
+        	moneda(monedas);
+        	vida(vidas);
         }
         printf("Pulse enter para continuar:\n");
         fflush(stdin);
@@ -463,129 +435,131 @@ inicio();
 
 
 //parte 9
-		while (vidas!=0) {
-		for(i=0;i<tamanoparte[part];i++){
-		printf("%c",historia[j+i]);
-		}
-		j=j+tamanoparte[part];
-		part++;
-		printf("\n");
-		printf("Introzuca aqui la respuesta:\n");
-        scanf("%s",respu);
-        i=0;
-        while (i==0&&vidas>0&&partes[saltar]==0){
-        if(strcmp(respu,respuestas[difi-1].nresp8)==0){
- 	    caraacierto();
- 	    i=1;
-        }
-        else{
- 	    carafallo();
- 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    vidas--;
- 	    scanf("%s",respu);
- 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
-		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp8);
- 		monedas-=2;
- 	    i=1;
-        }
- 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
- 		printf("No le quedan monedas\n");
- 	    } 
-        }
-        moneda(monedas);
-        vida(vidas);
-        printf("Pulse enter para continuar:\n");
-        fflush(stdin);
-        gets(espacios);
-        }
+		if (vidas!=0){
+
+			for(i=0;i<tamanoparte[part];i++){
+			printf("%c",historia[j+i]);
+			}
+			j=j+tamanoparte[part];
+			part++;
+			printf("\n");
+			printf("Introzuca aqui la respuesta:\n");
+        	scanf("%s",respu);
+        	i=0;
+        	while (i==0&&vidas>0&&partes[7]==0){
+        		if(strcmp(respu,respuestas[difi-1].nresp8)==0){
+ 	    			caraacierto();
+ 	    			i=1;
+        		} else{
+ 	    			carafallo();
+ 	    			printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	 			    vidas--;
+ 				    scanf("%s",respu);
+ 				    if (strcmp(respu,tienda)==0&&(monedas>0)){
+						printf("La solución comprada es: %s\n",respuestas[difi-1].nresp8);
+ 						monedas-=2;
+ 	    				i=1;
+        			}
+ 	    			if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 						printf("No le quedan monedas\n");
+ 	    			} 
+        		}
+        		moneda(monedas);
+        		vida(vidas);
+        		printf("Pulse enter para continuar:\n");
+        		fflush(stdin);
+        		gets(espacios);
+        	}
 
 
 //parte 10
-		while (vidas!=0) {
-		for(i=0;i<tamanoparte[part];i++){
-			printf("%c",historia[j+i]);
-		}
-		j=j+tamanoparte[part];
-		part++;
-		printf("\n");
-		printf("Introzuca aqui la respuesta:\n");
-        scanf("%s",respu);
-        i=0;
-        while (i==0&&vidas>0&&partes[saltar]==0){
-        if(strcmp(respu,respuestas[difi-1].nresp9)==0){
- 	    caraacierto();
- 	    i=1;
-        }
-        else{
- 	    carafallo();
- 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    vidas--;
- 	    scanf("%s",respu);
- 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
-		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp9);
- 		monedas-=2;
- 	    i=1;
-        }
- 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
- 		printf("No le quedan monedas\n");
- 	    } 
-        }
-        moneda(monedas);
-        vida(vidas);
-        printf("Pulse enter para continuar:\n");
-        fflush(stdin);
-        gets(espacios);
-        }
+		if (vidas!=0){
 
+			for(i=0;i<tamanoparte[part];i++){
+				printf("%c",historia[j+i]);
+			}
+			j=j+tamanoparte[part];
+			part++;
+			printf("\n");
+			printf("Introzuca aqui la respuesta:\n");
+        	scanf("%s",respu);
+        	i=0;
+        	while (i==0&&vidas>0&&partes[8]==0){
+        	if(strcmp(respu,respuestas[difi-1].nresp9)==0){
+ 	    	caraacierto();
+ 	    	i=1;
+        	} else{
+ 	    		carafallo();
+ 	    		printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    		vidas--;
+ 	    		scanf("%s",respu);
+ 	    		if (strcmp(respu,tienda)==0&&(monedas>0)){
+					printf("La solución comprada es: %s\n",respuestas[difi-1].nresp9);
+ 					monedas-=2;
+ 	    			i=1;
+        		}
+ 	    		if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 					printf("No le quedan monedas\n");
+ 	    		} 
+        	}
+        	moneda(monedas);
+        	vida(vidas);
+        	printf("Pulse enter para continuar:\n");
+        	fflush(stdin);
+        	gets(espacios);
+        }
 //parte 11
-		while (vidas!=0) {
-		for(i=0;i<tamanoparte[part];i++){
-			printf("%c",historia[j+i]);
-		}
-		j=j+tamanoparte[part];
-		part++;
-		printf("\n");
-		printf("Introzuca aqui la respuesta:\n");
-        scanf("%s",respu);
-        i=0;
-        while (i==0&&vidas>0&&partes[saltar]==0){
-        if(strcmp(respu,respuestas[difi-1].nresp10)==0){
- 	    caraacierto();
- 	    i=1;
-        }
-        else{
- 	    carafallo();
- 	    printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    vidas--;
- 	    scanf("%s",respu);
- 	    if (strcmp(respu,tienda)==0&&(monedas>0)){
-		printf("La solución comprada es: %s\n",respuestas[difi-1].nresp10);
- 		monedas-=2;
- 	    i=1;
-        }
- 	    if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
- 		printf("No le quedan monedas\n");
- 	    } 
-        }
-        moneda(monedas);
-        vida(vidas);
-        printf("Pulse enter para continuar:\n");
-        fflush(stdin);
-        gets(espacios);
-        }
+		if (vidas!=0){
 
+			if (difi==2){
+				for(i=0;i<tamanoparte[part];i++){
+					printf("%c",historia[j+i]);
+				}
+				j=j+tamanoparte[part];
+				part++;
+				printf("\n");
+				printf("Introzuca aqui la respuesta:\n");
+        		scanf("%s",respu);
+        		i=0;
+        		while (i==0&&vidas>0&&partes[9]==0){
+        			if(strcmp(respu,respuestas[difi-1].nresp10)==0){
+ 	    				caraacierto();
+ 	    				i=1;
+        			} else{
+ 	    				carafallo();
+ 	    				printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
+ 	    				vidas--;
+ 	    				scanf("%s",respu);
+ 	    				if (strcmp(respu,tienda)==0&&(monedas>0)){
+							printf("La solución comprada es: %s\n",respuestas[difi-1].nresp10);
+ 							monedas-=2;
+ 	    					i=1;
+        				}
+ 	    				if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 							printf("No le quedan monedas\n");
+ 	    				} 
+        			}
+        			moneda(monedas);
+        			vida(vidas);
+        			printf("Pulse enter para continuar:\n");
+        			fflush(stdin);
+        			gets(espacios);
+        		}
+			}
 //parte 12
-		while (vidas!=0) {
-		for(i=0;i<tamanoparte[part];i++){
-			printf("%c",historia[j+i]);
-		}
-		j=j+tamanoparte[part];
-		part++;
-		printf("\n");    
-		fflush(stdin);
-		gets(espacios);
+		if (vidas!=0){
+
+			for(i=0;i<tamanoparte[part];i++){
+				printf("%c",historia[j+i]);
+			}
+			j=j+tamanoparte[part];
+			part++;
+			printf("\n");
+
 		}}}}}}}}}}
 
+
+		partidaganper(vidas,nombre);
 
 
 //fin 
@@ -654,7 +628,7 @@ inicio();
 				j=0;
 				part=0;
 		}
-	estadisticas(nombre,100,personaje,100,vidas,monedas);
+		estadisticas(nombre,100,personaje,100,vidas,monedas);
 	} while(fin==0);
 	
 	return 0;
@@ -665,7 +639,7 @@ inicio();
 void inicio(){
 	int i;
 	char espacios[N];
-system ("color 8F");
+	system ("color 8F");
 //Inicio
 	for(i=0;i<6;i++){
 		printf("---\t");
@@ -754,6 +728,64 @@ void  moneda(int monedas){
 	printf("\n");
 
 }
+
+void partidaganper(int vidas,char nombre[]){
+	char espacios[N];
+	if(vidas==0){
+        	printf("GAME OVER, %s\n",nombre);
+        	printf("GAME OVER %s\n",nombre);
+        	printf("GAME OVER %s\n",nombre);
+        	printf("Los creadores le vendimos :D \n");
+        	printf("\n");
+
+        }
+    else{
+    printf("\n");
+	printf("%s. Enhorabuena ha conseguido derrotar al ingenio de los programadores :C \n",nombre);
+	printf("\n");
+	}
+	printf("Pulse enter para continuar\n");
+	printf("\n");
+    fflush(stdin);
+    gets(espacios);
+}
+
+
+void clases(){
+		printf("||           Caballero           ||             Hada              ||            Sabio              ||            Juglar             ||           Nigromante          ||           Personal            ||\n");
+		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
+		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
+		printf("|| *Símbolo de poder y gloria,*  ||    *Antigua protectora de*    ||      *Máximo referente*       ||     *Por todos conocido,*     ||   *Un ser que ya ni humano*   ||    Muy pocos pueden llegar    ||\n"); 
+		printf("||*portador de la antigua espada*||   *bosques  y manantiales,*   || *de intelectuales y líderes,* || *aquel que por los senderos*  ||     *puede considerarse,*     ||    a ser grandes leyendas,    ||\n");
+		printf("||         *de Drogmagt,*        ||        *venerada por*         || *legendario investigador con* ||   *deleita nuestros oídos*    || *inmoral,  ambicioso y ajeno* ||     pero todos  deberían      ||\n");
+		printf("|| *aquel que salió victorioso*  ||    *numerosas creencias,*     ||*innumerables  descubrimientos*|| *a cambio  de buen alimento,* || *a los principios naturales.* ||    tener una  oportunidad     ||\n");
+		printf("|| *de múltiples y legendarias*  || *aquella llamada  por muchos* ||        *a su espalda,*        ||   *y que por  algún cobijo*   ||Protagonista de temibles actos,||   para intentar  igualarse    ||\n");
+		printf("||         *contiendas.*         ||  *como descendiente directa*  ||    *genio tras varios de*     ||      *narra los eventos*      || difunde su  doctrina a la par ||    a estos seres míticos.     ||\n");
+		printf("||                               ||    *de los mismos dioses*     ||    *los grandes  avances*     ||    *de parajes escondidos*    ||que estudia las  bases de todo,||                               ||\n");
+		printf("||                               ||      *de la naturaleza.*      ||  *tecnológicos del momento.*  ||   *mientras juntos bebemos.*  || incluso dañándose a sí mismo. ||                               ||\n");
+		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
+		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
+		printf("||      Aunque el caballero      || Es bien sabido  que las hadas || Tras tantos años de estudios, ||  Toda una vida entreteniendo  ||  Desde que magia  y alquimia  ||No eres un gran ser legendario,||\n");
+		printf("||     sea  reconocido  como     ||   son seres de corazón puro   ||este  anciano de frágil aspecto||     a todo tipo de seres      || alquimia fueron descubiertas, ||       ni mucho menos,         ||\n");
+		printf("||    un héroe  entre  héroes    ||   y pensamiento  bondadoso,   ||     logró la elaboración      ||  a lo largo  del basto mundo  ||   no fueron  pocos los que    ||     apenas has salido de      ||\n");
+		printf("||   debido a sus  increíbles    ||  por lo que suelen despertar  ||         de un hechizo         || le han servido a este artista ||quisieron explorar sus límites,||       tu propia aldea,        ||\n");
+		printf("||     capacidades físicas,      ||  la piedad  tanto de aliados  || que le permitió  sobrevivir a ||   para obtener  suficientes   ||          ignorando            ||   pero esto no  te arrebata   ||\n");
+		printf("|| también es de sobra conocido  ||       como de enemigos.       ||  a todo tipo de enfermedades, ||   conocimientos acerca del    ||  cualquier  principio moral.  ||     la ilusión de avanzar,    ||\n");
+		printf("|| su  mal humor y su facilidad  ||    Debido a su naturaleza,    ||volviéndolo parcialmente inmune||   correcto establecimiento    ||Uno de ellos destacó del resto,||así que te  dispones a afrontar||\n");
+		printf("||     para la creación de       ||   no posee gran resistencia   ||      al paso del tiempo.      || de relaciones con casi todos. ||         descubriendo          ||una nueva y peligrosa  aventura||\n");
+		printf("||   conflictos innecesarios.    || ante  ningún  tipo de ataque, ||   Su costumbre de aislarse    ||            Además,            ||principios  profundos y oscuros||    de la que  nadie espera    ||\n");
+		printf("||                               ||  pero esto queda compensado   || en sus estudios pudo volverle ||   la experiencia  obtenida    ||del mundo y su  funcionamiento,||      que salgas con vida.     ||\n");
+		printf("||                               || con su capacidad de curación. || el más inteligente del mundo, ||   durante todos sus viajes    || permitiéndole  incluso evitar ||   (Esto es el modo difícil)   ||\n");
+		printf("||                               ||                               ||    pero su escasa relación    ||   hacia parajes inhóspitos    ||   daños o incluso la muerte   ||     (por si no se nota XD)    ||\n");
+		printf("||                               ||                               || con otros  seres lo ha vuelto ||   le ha servido para saber    ||  gracias a su  magia arcana.  ||                               ||\n");
+		printf("||                               ||                               ||      odioso e irritante.      ||     reaccionar mejor ante     ||                               ||                               ||\n");
+		printf("||                               ||                               ||                               ||   las  peores  situaciones.   ||                               ||                               ||\n");
+		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
+		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
+
+}
+
+
 void estadisticas(char nombre[],int dimperso,char personaje[],int dimpers,int vidas, int monedas){
 	FILE*festadistica;
 	festadistica=fopen("ESTADISTICASEPICQUEST.txt","a");

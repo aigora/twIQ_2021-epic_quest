@@ -17,20 +17,17 @@ Tras un largo viaje, tu escuadron ha logrado llegar a la ladera de los Pirineos 
 En cuestion de segundos estais completamente rodeados, y la batalla se habria librado irremediablemente si no fuera porque uno de los guerreros enemigos decidio dejaros pasar si fuerais capaces de ayudarle con un problema:
 
 En nuestra tribu, tenemos tres lideres que son elegidos segun su fuerza, pero para evitar disputas entre ellos se le otorga mayor poder a aquel de mayor edad, quedando con menos poder el de menor edad.
-El problema es que no sabemos sus edades, pero si sabemos que Hernan tiene el doble de anios que Bertolfo, que Dagoberto tiene ahora la misma edad que las edades de Bertolfo en cinco anios y Herman en tres juntas. Ah, y Bertolfo nacio veinte años antes que yo, que tengo 37.
-
+El problema es que no sabemos sus edades, pero si sabemos que Hernan tiene el doble de anios que Bertolfo, que Herman en tres tiene ahora la misma edad que las edades de Bertolfo en cinco anios y Dagoberto ahora juntas. Ah, y Bertolfo nacio veinte años antes que yo, que tengo 48.
 Podrias decirme cual sera el poder de cada uno (teniendo en cuenta que el primero es el mayor)
+(PrimeroSegundoTercero)
 
-Primero:
-Segundo:
-Tercero:
 
 Los guerreros, asombrados por tu gran ingenio cumplen su parte del trato, abriendo el paso, por lo que procedeis a continuar con la travesia.
 Hace rato que dejasteis atras la entrada al sendero. Os encontrais en un camino angosto, rodeado por grandes muros de rocas, ascendiendo tediosamente hacia un lugar mas elevado cuando, de repente, os encontrais de frente una pared imposible de atravesar escalando al final del camino, y a uno de los lados, una pequenia estructura que un par de individuos estan usando para elevar una serie de objetos.Decidis acercaros, visto que parece ser la unica opcion para proseguir, es en ese momento, cuando os percatais que ambos estan discutiendo. Decides prestar atencion a su conversacion y, creyendote capaz de solucionar el problema, te acercas hacia ellos para ayudarles. El problema es el siguiente:
 
 Dos hombres llevan cajas desde el suelo a la cima. El hombre pequenio puede llevar dos cajas a la vez y tarda dos minutos en ascender por el elevador.
 El hombre grande solo puede llevar una caja a la vez debido a que el elevador no aguantaria mas peso, pero tarda 30 segundos en realizar la subida, ya que el pequenio tiene mucha mas fuerza.
-Cada uno tarda en bajar lo mismo que tarda en subir, y las cajas no pueden ir solas ya que de vez en cuando, el sistema se atasca y solo se puede arreglar desde la plataforma. Si hay 7 cajas en total, cuantos minutos tardaran en subirlas al segundo piso?
+Cada uno tarda en bajar lo mismo que tarda en subir, y las cajas no pueden ir solas ya que de vez en cuando, el sistema se atasca y solo se puede arreglar desde la plataforma. Si hay 8 cajas en total, cuantos minutos tardaran en subirlas al segundo piso? (Ten en cuenta que en cada viaje se tienen que alternar para descansar).
 
 
 Logras deducirles el tiempo que tardaran, por lo que acabas convenciendoles de que dejaros usar el elevador no les supondra retrasar la entrega y, a cambio de un poco de comida, os ayudan en la ascension.
@@ -38,6 +35,7 @@ Al llegar a la cima, consigues ver a lo lejos un puente colgante, pero este esta
 Seis guerreros de su tribu se han sentado a la mesa para cenar (numerados del 1 al 6). El 1 es el de mayor rango y el 6, el de menor.
 Cada uno de ellos tiende a pelearse con aquel directamente mayor y menor que este y no puede sentarse a su lado, debido a que anteriormente eran lideres de aldeas enemigas. Ademas, los guerreros 3 y 5 discutieron el otro dia y se niegan a sentarse juntos.
 El guerrero 1 ya se ha sentado a la mesa y está esperando a los demás. Puedes sentarlos de forma que se mantenga la paz en la aldea?
+(Por ejemplo: 1,2,3,4,5,6)
 
 
 Excelente! El lider reconoce tu intelecto y procede a explicarte que, anteriormente el territorio estaba dominado por un gran tirano, que recientemente fue derrocado por estos seis guerreros, quienes mantenian la paz gracias al nuevo lider. Tras esta explicacion, el nuevo gobernador os premite pasar con la condicion de que limpieis la imagen de su pueblo.
@@ -47,7 +45,7 @@ En la taberna hay 22 velas encendidas. Una rafaga de viento que entra por la ven
 
 Efectivamente! El druida, sorprendido de que no hayas caido en su trampa, accede a teletransportaros a la capital.
 Cuando el hechizo termina, os encontrais ante una debastada y humeante Roma, en la que se halza en lo mas alto el estandarte de la legion demoniaca. Doloridos, aceptais la caida de la ciudad sin poder hacer nada, y os dirigis hacia la costa Este de la peninsula para embarcar hacia Constantinopla, capital del Imperio Oriental, pero la sensacion de derrota y los efectos del hechizo os han dejado sin apenas energias para continuar a pie. Por suerte, un agricultor que pasaba de camino con su carreta se compromete a llevaros como agradecimiento de lo que habiais hecho por el ya caido imperio. Durante el viaje y viendo que vuestro conductor se encontraba inquieto acerca de un problema personal, decides escucharle e intentas ayudarle como pago por su generosidad.
-Romulo y Remo, sus hijos, van a trabajar en una granja sembrando flores para los dioses. Se les ha asignado un terreno de 4 hectareas dividido por la mitad para que puedan trabajar de forma independiente. Remo empieza por el este y Romulo por el oeste. Romulo ara la tierra a un ritmo de 20 minutos por hectarea. Remo tarda 40 minutos, pero siembra tres veces más rápido que Romulo. Si se pagan 100 denarios por la siembra de un terreno de 4 hectareas, eque cantidad le correspondería a Remo?
+Romulo y Remo, sus hijos, van a trabajar en una granja sembrando flores para los dioses. Se les ha asignado un terreno de 4 hectareas dividido por la mitad para que puedan trabajar de forma independiente. Remo empieza por el este y Romulo por el oeste. Romulo ara la tierra a un ritmo de 20 minutos por hectarea. Remo tarda 40 minutos, pero siembra tres veces más rápido que Romulo. Si se pagan 100 denarios por la siembra de un terreno de 4 hectareas, que cantidad le correspondería a Remo?
 
 
 Cierto! Los dioses sin duda seran justos con sus hijos, por lo que el agricultor se queda relajado al fin y os deja en el puerto. Como agradecimiento, este habla con un capitan conocido para que os deje subir a su barco de forma gratuita. Pero para asegurarse de que de verdad eres un lider romano, decide ponerte a prueba justo antes del embarque.
