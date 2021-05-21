@@ -610,17 +610,17 @@ inicio();
 		 					printf("Hack activado, pulse enter\n");
 		 					fflush(stdin);
 		 					gets(espacios);
-		 					h=1;
+		 					h=2;
 		 					break;
 		 				case 1:
 		 					    printf("¿Cuántas partes quiere saltar?\n");
                 			    scanf("%d",&sal);
                 			    for (i=0;i<sal;i++){
-		 		     			printf("Introzuca un numero: (comenzando la primera parte por 0=pregunta 1)\n");
+		 		     			printf("Introzuca un numero: (comenzando la primera parte por 1=pregunta 1)\n");
 		 		     			scanf("%d",&saltar);
-		 		     			partes[saltar]=1;
+		 		     			partes[saltar-1]=1;
 				 			}
-				 			h=2;
+				 			h=1;
                             break;
 		    			case 2:
 		    				 monedas=1000;
@@ -628,15 +628,15 @@ inicio();
 		 					 printf("¿Cuántas partes quiere saltar?\n");
                 			 scanf("%d",&sal);
                 			 for (i=0;i<sal;i++){
-		 		     			printf("Introzuca un número: (comenzando la primera parte por 0=pregunta 1)\n");
+		 		     			printf("Introzuca un número: (comenzando la primera parte por 1=pregunta 1)\n");
 		 		     			scanf("%d",&saltar);
-		 		     			partes[saltar]=1;
+		 		     			partes[saltar-1]=1;
 				 			 }
-				 			 h=1;
+				 			 h=2;
 				 			 break;
 		    			case 3:
 		   	     			printf("Gracias por no usar hacks :D .\n");
-		   	     			h=2;
+		   	     			h=1;
 		   	     			break;
 					}
 				}
@@ -726,12 +726,12 @@ void hack(){
 void  vida(int vidas){
 	char i,j=3;
 	printf("\n");
-	printf("-Le quedan %d vidas.\n",vidas);
-	if (vidas<=5){
-	for (i=0;i<vidas;i++){
-		printf("%c\t",j);
-	}}
-	else{
+	if ((vidas<=5)&&(vidas>=0)){
+		printf("-Le quedan %d vidas.\n",vidas);
+		for (i=0;i<vidas;i++){
+			printf("%c\t",j);
+		}
+	}else{
 		printf("Vidas infinitas\n");
 	}
 	printf("\n");
@@ -741,10 +741,10 @@ void  moneda(int monedas){
 	if (monedas<=10){
 	printf("\n");
 	printf("-Le quedan %d monedas.\n",monedas);
-	for (i=0;i<monedas;i++){
-		printf("%c\t",j);
-	}}
-    else{
+		for (i=0;i<monedas;i++){
+			printf("%c\t",j);
+		}
+	} else{
 		printf("Monedas infinitas\n");
 	}
 	printf("\n");
@@ -761,12 +761,11 @@ void partidaganper(int vidas,char nombre[]){
         	printf("Los creadores le vendimos :D \n");
         	printf("\n");
 
-        }
-    else{
-    printf("\n");
-	printf("%s. Enhorabuena ha conseguido derrotar al ingenio de los programadores :C \n",nombre);
-	printf("\n");
-	}
+        } else{
+    		printf("\n");
+			printf("%s. Enhorabuena ha conseguido derrotar al ingenio de los programadores :C \n",nombre);
+			printf("\n");
+		}
 	printf("Pulse enter para continuar\n");
 	printf("\n");
     fflush(stdin);
