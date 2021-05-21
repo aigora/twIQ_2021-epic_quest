@@ -46,18 +46,16 @@ int main(){
 
 
 
-//Inicio
-inicio();
+//Inicio  
+    inicio();
 	printf("Bienvenido jugador, introduzca su nombre:\n");
-	for(i=0;i<51;i++){
+	/*for(i=0;i<51;i++){
 		printf("\n");
-	}
+	}*/
 	fflush(stdin);
 	gets(nombre);
-	for(i=0;i<100;i++){
-		printf("\n");
-	}
-
+	system("cls");
+    
 
 
 //comienza bucle
@@ -66,12 +64,12 @@ inicio();
 		printf("%s, escoja el personaje que quiere ser:\n",nombre);
 		clases();
 
-//modificar
-		for(i=0;i<19;i++){
+		/*for(i=0;i<22;i++){
 			printf("\n");
-		}
+		}*/
 		fflush(stdin);
 		gets(personaje);
+		system("cls");
 		printf("¿Quiere leer las intrucciones y normas? (si/no)\n");
 		scanf("%s",respuesta);
 		if (respuesta[0]=='s'){
@@ -82,11 +80,11 @@ inicio();
 		printf("Pulse enter para continuar:\n");
 		fflush(stdin);
 		gets(espacios);
-
+        system("cls");
 		printf(" ");
 		printf("Escoja el nivel de dificultad que desea:\n");
 		printf("(1)-->Historia1--> |Vida=5 corazones |Monedas=10|El protagonista se enfrenta a diversos problemas durante la caida de la antigua Roma\n");
-		printf("(2)-->Historia2--> |Vida=3 corazones |Monedas=8|El protagonista se ve encerrado en una ciudad distopica que pocos pueden siquiera imaginar\n");
+		printf("(2)-->Historia2--> |Vida=3 corazones |Monedas=6|El protagonista se ve encerrado en una ciudad distopica que pocos pueden siquiera imaginar\n");
 		scanf("%d",&difi);
 		w=0;
 		while (w==0){
@@ -102,7 +100,7 @@ inicio();
 				case 2:
 					if(h!=2){
 			 		vidas=3;
-			 		monedas=8;}
+			 		monedas=6;}
 			 		fhistoria=fopen("historia2.txt","r");
 		            flongitud=fopen("tamano2.txt","r");
 			 		w=1;
@@ -138,28 +136,23 @@ inicio();
 
 
 //Juego
-
+        system("cls");
 		system ("color 89");
 		printf("\n");
-		printf("\n");
-		for(i=0;i<50;i++){
-			printf("\n");
-		}
 		printf("%s, aquí comienza su historia, tendrá que luchar contra monstruos y vencer a esfinges cuyos enigmas ni las mentes más increibles, han logrado resolver. Aquí perderá todo el miedo a las matemáticas o dejará la universidad, usted decide...\t",nombre);
 		printf("\n");
-		printf("--------------\n");
+		printf("-----------------\n");
 		for(i=0;i<3;i++){
-			printf("||||||||||||||\n");
+			printf("%c\t",5);
 		}
-		printf("--------------\n");
-
+		printf("\n-----------------\n");
 		printf("Pulse enter para continuar:\n");
 		fflush(stdin);
 		gets(espacios);
-		
-		
-		
+		system("cls");
 
+		
+		
 //parte 1
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[i]);
@@ -170,6 +163,7 @@ inicio();
 		printf("Pulse enter para continuar:\n");
 		fflush(stdin);
 		gets(espacios);
+		system("cls");
 //parte 2
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
@@ -207,6 +201,7 @@ inicio();
         printf("Pulse enter para continuar:\n");
         fflush(stdin);
         gets(espacios);
+        system("cls");
 		}
  
 //parte 3
@@ -245,6 +240,7 @@ inicio();
         	printf("Pulse enter para continuar:\n");
         	fflush(stdin);
         	gets(espacios);
+        	system("cls");
         	}
         	
 
@@ -285,6 +281,7 @@ inicio();
 			printf("Pulse enter para continuar:\n");
         	fflush(stdin);
         	gets(espacios);
+        	system("cls");
         }
         
 
@@ -326,6 +323,7 @@ inicio();
         printf("Pulse enter para continuar:\n");
         fflush(stdin);
         gets(espacios);
+        system("cls");
         }
         
 
@@ -367,6 +365,7 @@ inicio();
         	printf("Pulse enter para continuar:\n");
         	fflush(stdin);
         	gets(espacios);
+        	system("cls");
         }
 
 
@@ -406,6 +405,7 @@ inicio();
         printf("Pulse enter para continuar:\n");
         fflush(stdin);
         gets(espacios);
+        system("cls");
         }
 			
 
@@ -447,6 +447,7 @@ inicio();
         printf("Pulse enter para continuar:\n");
         fflush(stdin);
         gets(espacios);
+        system("cls");
         }
 
 //parte 9
@@ -486,6 +487,7 @@ inicio();
         	printf("Pulse enter para continuar:\n");
         	fflush(stdin);
         	gets(espacios);
+        	system("cls");
         }
 
 
@@ -528,6 +530,7 @@ inicio();
         printf("Pulse enter para continuar:\n");
         fflush(stdin);
         gets(espacios);
+        system("cls");
     }
 //parte 11
 		if (vidas!=0){
@@ -566,6 +569,7 @@ inicio();
         		printf("Pulse enter para continuar:\n");
         		fflush(stdin);
         		gets(espacios);
+        		system("cls");
 			}}
 //parte 12
 		if (vidas!=0){
@@ -579,16 +583,15 @@ inicio();
 
 		}}}}}}}}}}
 
-
 		partidaganper(vidas,nombre);
 
 
 //fin 
 
 		printf("¿Desea, jugar de nuevo (si/no)?\n");
-		for(i=0;i<51;i++){
+		/*for(i=0;i<49;i++){
 			printf("\n");
-		}
+		}*/
 		gets(final);
 
 		if (final[0]=='n'){
@@ -642,6 +645,8 @@ inicio();
 				}
 				j=0;
 				part=0;
+				system("cls");
+
 		}
 		estadisticas(nombre,100,personaje,100,vidas,monedas);
 	} while(fin==0);
@@ -660,11 +665,11 @@ void inicio(){
 		printf("---\t");
 	}
 	printf("\n");
-	for(i=0;i<5;i++){
+	for(i=0;i<6;i++){
     		if(i==3){
-        		printf("| |             EPIC QUEST              | |\n");
+        		printf("|%c|            %cEPIC QUEST%c%c            |%c|\n",24,16,174,17,24);
 		}
-		printf("| |                                     | |\n");
+		printf("|%c|                                     |%c|\n",24,24);
 	}
 	for(i=0;i<6;i++){
 		printf("---\t");}
@@ -676,10 +681,12 @@ void inicio(){
 	gets(espacios);
 	system ("color 1A");
 	for(i=0;i<6000;i++){
+		printf("%c\t",25);
 		printf("%c\t",31);
 	}
 	printf(" \n");
 	printf(" \n");
+	system("cls");
 	system ("color 9E");
 }
 
@@ -738,8 +745,8 @@ void  vida(int vidas){
 }
 void  moneda(int monedas){
 	char i,j=169;
-	if (monedas<=10){
 	printf("\n");
+	if (monedas<=10){
 	printf("-Le quedan %d monedas.\n",monedas);
 		for (i=0;i<monedas;i++){
 			printf("%c\t",j);
@@ -753,6 +760,7 @@ void  moneda(int monedas){
 
 void partidaganper(int vidas,char nombre[]){
 	char espacios[N];
+	system("cls");
 	system ("color 5C");
 	if(vidas==0){
         	printf("GAME OVER, %s\n",nombre);
@@ -770,6 +778,8 @@ void partidaganper(int vidas,char nombre[]){
 	printf("\n");
     fflush(stdin);
     gets(espacios);
+    system("cls");
+
 }
 
 
