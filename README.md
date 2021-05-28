@@ -1,6 +1,6 @@
 # Epic Quest
 
-Juego, en el que el protagista, en este caso un caballer@, alien, etc (según elección de lo que quiera ser), ha de ir venciendo a una serie de enemigos, tras resolver unos acertijos y así narrar su propia historia.
+Juego, en el que el protagista, en este caso un caballer@, alien, etc (según elección de lo que quiera ser), ha de ir avanzando en una aventura, tras resolver unos acertijos y así narrar su propia historia.
 
 ## Integrantes del equipo
 Jaime Alonso Poyatos {SoyJaimeXD}
