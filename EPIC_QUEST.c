@@ -20,6 +20,8 @@ struct respuesta{
 char nresp1[N],nresp2[N],nresp3[N],nresp4[N],nresp5[N],nresp6[N],nresp7[N],nresp8[N],nresp9[N],nresp10[N];
 };
 
+
+//Recopilacio de funciones
 void inicio();
 void intruciones();
 void caraacierto();
@@ -89,7 +91,7 @@ int main(){
 		w=0;
 		while (w==0){
 			switch (difi){
-				case 1:
+				case 1: //Si se elige la opcion 1 comenzara el juego con la historia 1 y con monedas y vidas concretas para la historia 1
 					if(h!=2){
 					vidas=5;
 			 		monedas=10;}
@@ -97,7 +99,7 @@ int main(){
 		            flongitud=fopen("tamano1.txt","r");
 			 		w=1;
 		   			break;
-				case 2:
+				case 2: //Si se elige la opcion 2 comenzara el juego con la historia 2 y con monedas y vidas concretas para la historia 2
 					if(h!=2){
 			 		vidas=3;
 			 		monedas=6;}
@@ -105,8 +107,8 @@ int main(){
 		            flongitud=fopen("tamano2.txt","r");
 			 		w=1;
 			 		break;
-		 		default:
-		     		printf("No ha escogido una opción correcta, por favor introduzca un nivel de dificultad:\n");
+		 		default: // Si se responde algo distinto a 1 o 2 salta el mensaje siguiente "No ha escogido una opción correcta, por favor introduzca la historia que desea jugar"
+		     		printf("No ha escogido una opción correcta, por favor introduzca la historia que desea jugar:\n");
 		      		scanf("%d",&difi);	
 			}
 		}
@@ -135,7 +137,7 @@ int main(){
 		fclose(fhistoria);
 
 
-//Juego
+//Inicio del juego
         system("cls");
 		system ("color 89");
 		printf("\n");
@@ -593,10 +595,10 @@ int main(){
 			printf("\n");
 		}*/
 		gets(final);
-
-		if (final[0]=='n'){
+		//Una vez acabado el juego se te pregunta si quieres volver a jugar con o sin hacks
+		if (final[0]=='n'){ //Si se escribe no o n salta el final 
 			fin=1;
-		} else if(final[0]=='s'){
+		} else if(final[0]=='s'){ //Si se escribe si o s se inicia el juego preguntando al jugador si quiere elegir algun hack
 		 	jugadas++;
 		 	printf("\n");
 		 	printf("Bienvenido de nuevo, %s\n",nombre);
@@ -607,7 +609,7 @@ int main(){
 		 			hack();
 		 			scanf("%d",&hacks);
 		 			switch (hacks){
-		 				case 0:
+		 				case 0://Hack de vidas y monedas infinitas
 		 					monedas=1000;
 		 					vidas=1000;
 		 					printf("Hack activado, pulse enter\n");
@@ -615,7 +617,7 @@ int main(){
 		 					gets(espacios);
 		 					h=2;
 		 					break;
-		 				case 1:
+		 				case 1://Hack para poder saltarse partes
 		 					    printf("¿Cuántas partes quiere saltar?\n");
                 			    scanf("%d",&sal);
                 			    for (i=0;i<sal;i++){
@@ -625,7 +627,7 @@ int main(){
 				 			}
 				 			h=1;
                             break;
-		    			case 2:
+		    			case 2://Hack para tener vidas y monedas infinitas y tambien poder saltarse partes
 		    				 monedas=1000;
 		 					 vidas=1000;
 		 					 printf("¿Cuántas partes quiere saltar?\n");
@@ -637,7 +639,7 @@ int main(){
 				 			 }
 				 			 h=2;
 				 			 break;
-		    			case 3:
+		    			case 3://Si se escoge la opcion 3 la cual se presenta como "Ninguno" entonces se le felicitara al jugador por no elegir ningun hack
 		   	     			printf("Gracias por no usar hacks :D .\n");
 		   	     			h=1;
 		   	     			break;
@@ -678,6 +680,7 @@ void inicio(){
 	}
 	printf("Para poder disfrutar de la experiencia, ponga el programa en pantalla completa\nEn windows con la tecla 'F11' o 'FN'+'F11' en caso de no funcionar la primera\n");
 	printf("Pulse enter para comenzar.\n");
+	fflush (stdin);
 	gets(espacios);
 	system ("color 1A");
 	for(i=0;i<6000;i++){
@@ -693,7 +696,7 @@ void inicio(){
 
 
 
-
+//Funcion de instrucciones (texto)
 void intruciones(){
 	printf("Las intrucciones y normas son básicas:\n");
 	printf("-El jugador ha de ir resolviendo una serie de preguntas para avanzar en la historia.\n");
@@ -703,6 +706,7 @@ void intruciones(){
   	printf("\n");
 }
 
+//Funcion de cara cuando se acierta la respuesta
 void caraacierto(){
 	printf("La solución es correcta\n");
 	printf("----------\n");
@@ -713,6 +717,8 @@ void caraacierto(){
     printf("Prosigamos con la aventura\n");
  	printf("\n");
 }
+
+//Funcion de cara cuando se falla la respuesta
 void carafallo(){
 	printf("La solución es incorrecta\n");
 	printf("----------\n");
@@ -723,6 +729,7 @@ void carafallo(){
  	printf("\n");
 }
 
+//Funcion de los hacks (texto)
 void hack(){
 	printf("¿Quiere activar alguno de estos hacks?\n");
 	printf("0=Inmortalidad (vidas y monedas infinitas)\n");
@@ -730,6 +737,8 @@ void hack(){
     printf("2=Ambos\n");
     printf("3=Ninguno\n");
 }
+
+//Funcion de vida
 void  vida(int vidas){
 	char i,j=3;
 	printf("\n");
@@ -743,6 +752,8 @@ void  vida(int vidas){
 	}
 	printf("\n");
 }
+
+//Funcion de monedas
 void  moneda(int monedas){
 	char i,j=169;
 	printf("\n");
@@ -758,6 +769,7 @@ void  moneda(int monedas){
 
 }
 
+//Funcion de fin del juego , cuando te quedas sin vidas pone "GAME OVER" y cuando acabas con vidas te felicita y continua el programa
 void partidaganper(int vidas,char nombre[]){
 	char espacios[N];
 	system("cls");
@@ -782,7 +794,7 @@ void partidaganper(int vidas,char nombre[]){
 
 }
 
-
+//Funcion de eleccion de clases (texto)
 void clases(){
 		printf("||           Caballero           ||             Hada              ||            Sabio              ||            Juglar             ||           Nigromante          ||           Personal            ||\n");
 		printf("||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||-------------------------------||\n");
@@ -817,7 +829,7 @@ void clases(){
 
 }
 
-
+//Funcion para estadisticas
 void estadisticas(char nombre[],int dimperso,char personaje[],int dimpers,int vidas, int monedas){
 	FILE*festadistica;
 	festadistica=fopen("ESTADISTICASEPICQUEST.txt","a");
