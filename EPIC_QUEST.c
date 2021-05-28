@@ -71,7 +71,7 @@ int main(){
 		}*/
 		fflush(stdin);
 		gets(personaje);
-		system("cls");
+		system("cls"); //Limpiar pantalla
 		printf("¿Quiere leer las intrucciones y normas? (si/no)\n");
 		scanf("%s",respuesta);
 		if (respuesta[0]=='s'){ // Se ha preguntado previamente si quiere leer las instruccion , si se responde si o s se imprimen en pantalla
@@ -82,12 +82,12 @@ int main(){
 		printf("Pulse enter para continuar:\n");
 		fflush(stdin);
 		gets(espacios);
-        system("cls");
+        system("cls"); //Limpiar pantalla
 		printf(" ");
 		printf("Escoja el nivel de dificultad que desea:\n");
 		printf("(1)-->Historia1--> |Vida=5 corazones |Monedas=10|El protagonista se enfrenta a diversos problemas durante la caida de la antigua Roma\n");
 		printf("(2)-->Historia2--> |Vida=3 corazones |Monedas=6|El protagonista se ve encerrado en una ciudad distopica que pocos pueden siquiera imaginar\n");
-		scanf("%d",&difi);
+		scanf("%d",&difi); //Aqui se le pide al jugador elegir una historia
 		w=0;
 		while (w==0){
 			switch (difi){
