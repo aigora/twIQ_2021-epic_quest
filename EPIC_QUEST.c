@@ -705,7 +705,7 @@ void intruciones(){
 	printf("-El jugador ha de ir resolviendo una serie de preguntas para avanzar en la historia.\n");
    	printf("-Se comienza con determinada vida y monedas, según el nivel de dificultad escogido.\n");
   	printf("-Las monedas se pueden utilizar para comprar las soluciones a los acertijos,etc.\n");
-  	printf("-No esta permitido hacer trampas, el jugador obtendrá un fichero con sus estadísticas durante el juego.\n");
+  	printf("-No esta permitido hacer trampas, ecepto si se lo permitimos :) .\n");
   	printf("\n");
 }
 
