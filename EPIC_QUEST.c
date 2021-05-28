@@ -14,11 +14,15 @@ Javier Escudero García
 #include <string.h> 
 
 #define N 10000
+#define P 100
 
 //estructura para almacenar las respuestas según la historia
 struct respuesta{
 char nresp1[N],nresp2[N],nresp3[N],nresp4[N],nresp5[N],nresp6[N],nresp7[N],nresp8[N],nresp9[N],nresp10[N];
 };
+
+
+
 
 
 //Recopilación de funciones
@@ -31,7 +35,7 @@ void vida(int vidas);
 void moneda(int monedas);
 void partidaganper(int vidas,char nombre[]);
 void clases();
-void estadisticas(char nombre[],int dimperso,char personaje[],int dimpers,int vidas, int monedas);
+void estadisticas(char nombre[],int dimperso,int vidas, int monedas);
 
 
 
@@ -40,20 +44,21 @@ int main(){
 	FILE*fhistoria,*flongitud;//declaración de ficheros a utilizar
 	setlocale(LC_CTYPE, "Spanish");//función para poder implimir tildes, acentos y ñ
 	struct respuesta respuestas[2]={{"DagobertoHernanBertolfo","13","1,3,6,4,2,5","3","50","10","17","domingo","5"},{"59","A","D","0","10","104","1","V","2368","7"}};//vector estructura para almacenar las respuestas correctas
-	char nombre[N],personaje[N],historia[N];//variables tipo char utilizadas en el inicio
+	char nombre[P],personaje[P],historia[N];//variables tipo char utilizadas en el inicio
 	char espacios[N],final[N],respuesta[N],tienda[N]="tienda",respu[N];//variables tipo char para funcionalidades secundarias
-	int i,w=0,j,fin=0,jugadas=0,difi,vidas,monedas,tamanoparte[N],part=0,h;//declaración de varaibles tipo int para ser usadas en funcionalidades básicas
+	int i,w=0,j,fin=0,jugadas=0,difi,vidas=0,monedas=0,tamanoparte[N],part=0,h;//declaración de varaibles tipo int para ser usadas en funcionalidades básicas
 	int hacks,sal,saltar,partes[N];//declaración de variables utilizadas para otras funcionalidades, hacks
 
 
 
 //Inicio  despues del menu de inicio
     inicio();
+    
 	printf("Bienvenido jugador, introduzca su nombre:\n");
 	/*for(i=0;i<51;i++){
 		printf("\n");
 	}*/
-	
+	fflush(stdin);
 	gets(nombre);
 	system("cls");
     
@@ -152,7 +157,7 @@ int main(){
 		printf("Pulse enter para continuar:\n");
 		fflush(stdin);
 		gets(espacios);
-		system("cls");
+		system("cls");//limpiar pantalla
 
 		
 		
@@ -587,7 +592,7 @@ int main(){
 		}}}}}}}}}}
 
 		partidaganper(vidas,nombre);//llamamos a la función que dice si ha ganado o perdido
-        estadisticas(nombre,10,personaje,10,vidas,monedas); //Estadisticas de partida concreta de jugador especifico
+        estadisticas(nombre,10,vidas,monedas); //Estadisticas de partida concreta de jugador especifico
 
 
 //FIN 
@@ -607,7 +612,7 @@ int main(){
 		 	jugadas++;
 		 	printf("\n");
 		 	printf("Bienvenido de nuevo, %s\n",nombre);
-		 	if (jugadas==1){
+		 	if (jugadas>=1){
 		 		printf("Por haber jugado honestamente la primera vez, le concedemos una serie de hacks.\n");}
 		 		h=0;
 		 		while (h==0){
@@ -832,10 +837,10 @@ void clases(){
 
 }
 
-///Funcion para estadisticas
-void estadisticas(char nombre[],int dimperso,char personaje[],int dimpers,int vidas, int monedas){
+///Funcion para estadisticas 
+void estadisticas(char nombre[],int dimperso,int vidas, int monedas){
 	FILE*festadistica;
 	festadistica=fopen("ESTADISTICASEPICQUEST.txt","a");//abrimos o creamos un fichero para almacenar las estadisticas
-	fprintf(festadistica, "Usuario: %s | Personaje escogido: %s | Vidas restantes: %d |Monedas no utilizadas: %d | ",nombre,personaje,vidas,monedas);//almacenamos las estadísticas
+	fprintf(festadistica, "Usuario: %s | Vidas restantes: %d |Monedas no utilizadas: %d | \n",nombre,vidas,monedas);//almacenamos las estadísticas
 	fclose(festadistica);
 }
