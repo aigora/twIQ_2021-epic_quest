@@ -48,7 +48,7 @@ int main(){
 
 
 
-//Inicio  
+//Inicio  despues del menu de inicio
     inicio();
 	printf("Bienvenido jugador, introduzca su nombre:\n");
 	/*for(i=0;i<51;i++){
@@ -74,7 +74,7 @@ int main(){
 		system("cls");
 		printf("¿Quiere leer las intrucciones y normas? (si/no)\n");
 		scanf("%s",respuesta);
-		if (respuesta[0]=='s'){ // Se pregunta si se quieren leer las instruccion , si se responde si o s se imprimen en pantalla
+		if (respuesta[0]=='s'){ // Se ha preguntado previamente si quiere leer las instruccion , si se responde si o s se imprimen en pantalla
 			intruciones();
 		} else{		
 			printf(" \n");
@@ -138,13 +138,13 @@ int main(){
 
 
 //Inicio del juego
-        system("cls");
-		system ("color 89");
+        system("cls"); //Limpiar pantalla
+		system ("color 89"); //Cambio de color del fondo
 		printf("\n");
 		printf("%s, aquí comienza su historia, tendrá que luchar contra monstruos y vencer a esfinges cuyos enigmas ni las mentes más increibles, han logrado resolver. Aquí perderá todo el miedo a las matemáticas o dejará la universidad, usted decide...\t",nombre);
 		printf("\n");
 		printf("-----------------\n");
-		for(i=0;i<3;i++){
+		for(i=0;i<3;i++){ 
 			printf("%c\t",5);
 		}
 		printf("\n-----------------\n");
@@ -609,7 +609,7 @@ int main(){
 		 		h=0;
 		 		while (h==0){
 		 			hack();
-		 			scanf("%d",&hacks);
+		 			scanf("%d",&hacks); //Se le pregunta que hack quiere elegir o si prefiere continuar sin ellos
 		 			switch (hacks){
 		 				case 0://Hack de vidas y monedas infinitas
 		 					monedas=1000;
@@ -621,7 +621,7 @@ int main(){
 		 					break;
 		 				case 1://Hack para poder saltarse partes
 		 					    printf("¿Cuántas partes quiere saltar?\n");
-                			    scanf("%d",&sal);
+                			    scanf("%d",&sal); //Se pregunta cuantas partes se quiere saltar
                 			    for (i=0;i<sal;i++){
 		 		     			printf("Introzuca un numero: (comenzando la primera parte por 1=pregunta 1)\n");
 		 		     			scanf("%d",&saltar);
@@ -633,7 +633,7 @@ int main(){
 		    				 monedas=1000;
 		 					 vidas=1000;
 		 					 printf("¿Cuántas partes quiere saltar?\n");
-                			 scanf("%d",&sal);
+                			 scanf("%d",&sal); //Se pregunta cuantas partes se quiere saltar
                 			 for (i=0;i<sal;i++){
 		 		     			printf("Introzuca un número: (comenzando la primera parte por 1=pregunta 1)\n");
 		 		     			scanf("%d",&saltar);
@@ -649,10 +649,10 @@ int main(){
 				}
 				j=0;
 				part=0;
-				system("cls");
+				system("cls"); //Limpiar pantalla
 
 		}
-		estadisticas(nombre,100,personaje,100,vidas,monedas);
+		estadisticas(nombre,100,personaje,100,vidas,monedas); //Estadisticas de partida concreta de jugador especifico
 	} while(fin==0);
 	
 	return 0;
@@ -684,15 +684,15 @@ void inicio(){
 	printf("Pulse enter para comenzar.\n");
 	fflush (stdin);
 	gets(espacios);
-	system ("color 1A"); //Cmbio de color del fondo 
+	system ("color 1A"); //Cambio de color del fondo 
 	for(i=0;i<6000;i++){ //Bucle para imprimir (pantalla de carga) despues del menu de inicio
 		printf("%c\t",25);
 		printf("%c\t",31);
 	}
 	printf(" \n");
 	printf(" \n");
-	system("cls");
-	system ("color 9E"); //Cmbio de color del fondo
+	system("cls"); //Limpiar pantalla
+	system ("color 9E"); //Cambio de color del fondo
 }
 
 
