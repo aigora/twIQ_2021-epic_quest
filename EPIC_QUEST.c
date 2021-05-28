@@ -652,8 +652,12 @@ int main(){
 				}
 				j=0;
 				part=0;
+				if((h!=2)){
+					for(i=0;i<12;i++){
+						partes[i]=0;
+					}
+				}
 				system("cls"); //Limpiar pantalla
-
 		}
 	} while(fin==0);//bucle que ejercuta todo el programa hasta que queramos terminarlo
 	return 0;
