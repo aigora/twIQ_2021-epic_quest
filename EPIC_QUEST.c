@@ -53,7 +53,7 @@ int main(){
 	/*for(i=0;i<51;i++){
 		printf("\n");
 	}*/
-	fflush(stdin);
+	
 	gets(nombre);
 	system("cls");
     
@@ -178,7 +178,7 @@ int main(){
 		printf("Introzuca aqui la respuesta:\n");
         scanf("%s",respu);//Pedimos una respuesta
         i=0;
-        while (i==0){ //Utilizamos un bucle hasta que acierte la pregunta o seleccione la opcion de tienda
+        while ((i==0)&&(vidas>0)){ //Utilizamos un bucle hasta que acierte la pregunta o seleccione la opcion de tienda
         if(strcmp(respu,respuestas[difi-1].nresp1)==0){ //Comparamos la respuesta introducida con la respuesta correcta de un vector estructuras
  	    	caraacierto(); //Dibujamos una cara curiosa
  	    	i=1; //Si se cumple lo anterior se termina la parte
@@ -208,7 +208,7 @@ int main(){
 		}
  //Desde aquí la impresión del programa y el pedir preguntas es idético al de la pregunta 1, únicamente se modifica la posición de la respuesta en el vector estructura
 //PREGUNTA 2
-		if (vidas!=0){
+		if (vidas>0){
 			for(i=0;i<tamanoparte[part];i++){
 				printf("%c",historia[j+i]);
 			}
@@ -219,7 +219,7 @@ int main(){
 			printf("Introzuca aqui la respuesta:\n");
     	    scanf("%s",respu);
     	    i=0;
-    	    while (i==0){
+    	    while ((i==0)&&(vidas>0)){
     		    if(strcmp(respu,respuestas[difi-1].nresp2)==0){
  				    caraacierto();
  				    i=1;
@@ -248,7 +248,7 @@ int main(){
         	
 
 //PREGUNTA 3
-		if (vidas!=0){
+		if (vidas>0){
 
 			for(i=0;i<tamanoparte[part];i++){
 				printf("%c",historia[j+i]);
@@ -260,7 +260,7 @@ int main(){
 			printf("Introzuca aqui la respuesta:\n");
      	   	scanf("%s",respu);
     	    i=0;
-    	    while (i==0){
+    	    while ((i==0)&&(vidas>0)){
         		if(strcmp(respu,respuestas[difi-1].nresp3)==0){
  	    			caraacierto();
  	    			i=1;
@@ -289,7 +289,7 @@ int main(){
         
 
 //PREGUNTA 4
-		if (vidas!=0){
+		if (vidas>0){
 
 			for(i=0;i<tamanoparte[part];i++){
 				printf("%c",historia[j+i]);
@@ -302,7 +302,7 @@ int main(){
 			printf("Introzuca aqui la respuesta:\n");
      	    scanf("%s",respu);
      	    i=0;
-        	while (i==0){
+        	while ((i==0)&&(vidas>0)){
     	 	   if(strcmp(respu,respuestas[difi-1].nresp4)==0){
  	    		caraacierto();
  	    		i=1;
@@ -332,7 +332,7 @@ int main(){
 
 
 //PREGUNTA 5
-		if (vidas!=0){
+		if (vidas>0){
 
 			for(i=0;i<tamanoparte[part];i++){
 				printf("%c",historia[j+i]);
@@ -344,7 +344,7 @@ int main(){
 			printf("Introzuca aqui la respuesta:\n");
         	scanf("%s",respu);
     	    i=0;
-    	    while (i==0){
+    	    while ((i==0)&&(vidas>0)){
      		   if(strcmp(respu,respuestas[difi-1].nresp5)==0){
  					caraacierto();
  	    			i=1;
@@ -373,7 +373,7 @@ int main(){
 
 
 //PREGUNTA 6
-		if (vidas!=0){
+		if (vidas>0){
 			for(i=0;i<tamanoparte[part];i++){
 				printf("%c",historia[j+i]);
 			}
@@ -384,7 +384,7 @@ int main(){
 			printf("Introzuca aqui la respuesta:\n");
         	scanf("%s",respu);
         	i=0;
-        	while (i==0){
+        	while ((i==0)&&(vidas>0)){
     		    if(strcmp(respu,respuestas[difi-1].nresp6)==0){
  				    caraacierto();
  				    i=1;
@@ -414,7 +414,7 @@ int main(){
 
 
 //PREGUNTA 7
-		if (vidas!=0){
+		if (vidas>0){
 
 			for(i=0;i<tamanoparte[part];i++){
 				printf("%c",historia[j+i]);
@@ -426,7 +426,7 @@ int main(){
 			printf("Introzuca aqui la respuesta:\n");
         	scanf("%s",respu);
         	i=0;
-        	while (i==0){
+        	while ((i==0)&&(vidas>0)){
         	if(strcmp(respu,respuestas[difi-1].nresp7)==0){
  			    caraacierto();
  			    i=1;
@@ -454,7 +454,7 @@ int main(){
         }
 
 //PREGUNTA 8
-		if (vidas!=0){
+		if (vidas>0){
 
 			for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[j+i]);
@@ -466,7 +466,7 @@ int main(){
 			printf("Introzuca aqui la respuesta:\n");
         	scanf("%s",respu);
         	i=0;
-        	while (i==0){
+        	while ((i==0)&&(vidas>0)){
         		if(strcmp(respu,respuestas[difi-1].nresp8)==0){
  	    			caraacierto();
  	    			i=1;
@@ -496,7 +496,7 @@ int main(){
 
 
 //PREGUNTA 9
-		if (vidas!=0){
+		if (vidas>0){
 
 			for(i=0;i<tamanoparte[part];i++){
 				printf("%c",historia[j+i]);
@@ -508,7 +508,7 @@ int main(){
 			printf("Introzuca aqui la respuesta:\n");
         	scanf("%s",respu);
         	i=0;
-        	while (i==0){
+        	while ((i==0)&&(vidas>0)){
         	if(strcmp(respu,respuestas[difi-1].nresp9)==0){
  	    	caraacierto();
  	    	i=1;
@@ -536,7 +536,7 @@ int main(){
         system("cls");
     }
 //PREGUNTA 10
-		if (vidas!=0){
+		if (vidas>0){
 			if (difi==2){
 				for(i=0;i<tamanoparte[part];i++){
 					printf("%c",historia[j+i]);
@@ -548,7 +548,7 @@ int main(){
 				printf("Introzuca aqui la respuesta:\n");
         		scanf("%s",respu);
         		i=0;
-        		while (i==0){
+        		while ((i==0)&&(vidas>0)){
         			if(strcmp(respu,respuestas[difi-1].nresp10)==0){
  	    				caraacierto();
  	    				i=1;
@@ -575,7 +575,7 @@ int main(){
         		system("cls");
 			}}
 //PARTE FINAL
-		if (vidas!=0){
+		if (vidas>0){
 
 			for(i=0;i<tamanoparte[part];i++){
 				printf("%c",historia[j+i]);
@@ -745,7 +745,7 @@ void hack(){
 void  vida(int vidas){
 	char i,j=3;
 	printf("\n");
-	if ((vidas<=5)&&(vidas>=0)){ //Utilizamos un if para imprimir vidas en caso de que no sean infinitas
+	if (vidas<=5){ //Utilizamos un if para imprimir vidas en caso de que no sean infinitas
 		printf("-Le quedan %d vidas.\n",vidas);
 		for (i=0;i<vidas;i++){
 			printf("%c\t",j);
