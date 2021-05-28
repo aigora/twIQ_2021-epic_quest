@@ -60,7 +60,7 @@ int main(){
     
 
 
-//comienza bucle
+//Instrucciones y eleccion de la historia
 	do{
 		
 		printf("%s, escoja el personaje que quiere ser:\n",nombre);
@@ -74,7 +74,7 @@ int main(){
 		system("cls");
 		printf("¿Quiere leer las intrucciones y normas? (si/no)\n");
 		scanf("%s",respuesta);
-		if (respuesta[0]=='s'){
+		if (respuesta[0]=='s'){ // Se pregunta si se quieren leer las instruccion , si se responde si o s se imprimen en pantalla
 			intruciones();
 		} else{		
 			printf(" \n");
@@ -155,7 +155,7 @@ int main(){
 
 		
 		
-//parte 1
+//PROLOGO
 		for(i=0;i<tamanoparte[part];i++){
 			printf("%c",historia[i]);
 		}
@@ -166,38 +166,38 @@ int main(){
 		fflush(stdin);
 		gets(espacios);
 		system("cls");
-//parte 2
-		for(i=0;i<tamanoparte[part];i++){
+//PREGUNTA 1
+		for(i=0;i<tamanoparte[part];i++){ //Imprimimos todos los caracteres que tiene la pregunta
 			printf("%c",historia[j+i]);
 		}
-		j=j+tamanoparte[part];
-		part++;
-		if(partes[0]!=1){
+		j=j+tamanoparte[part];//Vamos sumando el tamaño de las partes
+		part++;//Sumamos 1 a la parte para imprimir la siguiente parte
+		if(partes[0]!=1){ //Utilizamos un if para en caso de haber elegido "saltar parte" en los hacks , no se imprime la pregunta
 		printf("\n");
 		printf("Introzuca aqui la respuesta:\n");
-        scanf("%s",respu);
+        scanf("%s",respu);//Pedimos una respuesta
         i=0;
-        while (i==0){
-        if(strcmp(respu,respuestas[difi-1].nresp1)==0){
- 	    	caraacierto();
- 	    	i=1;
-        } else{
- 	    	carafallo();
+        while (i==0){ //Utilizamos un bucle hasta que acierte la pregunta o seleccione la opcion de tienda
+        if(strcmp(respu,respuestas[difi-1].nresp1)==0){ //Comparamos la respuesta introducida con la respuesta correcta de un vector estructuras
+ 	    	caraacierto(); //Dibujamos una cara curiosa
+ 	    	i=1; //Si se cumple lo anterior se termina la parte
+        } else{ //Si la respuesta intrudicuda es incorrecta se ejecuta el else
+ 	    	carafallo(); //Dibujamos una cara curiosa triste
  	    	printf("Vuelva a introducir otra respuesta o introduzca 'tienda' para comprar la solución la cual le cuesta 2 monedas:\n");
- 	    	vidas--;
- 	    	fflush(stdin);
- 	    	gets(respu);
- 	    		if (strcmp(respu,tienda)==0&&(monedas>0)){
+ 	    	vidas--; //Se le quita una vida
+ 	    	fflush(stdin); //Borramos el buffer de entrada
+ 	    	gets(respu); //Se le vuelve a pedir la pregunta
+ 	    		if (strcmp(respu,tienda)==0&&(monedas>0)){ //Se elige la opcion de tienta para poder comprar la respuesta
 					printf("La solución comprada es: %s\n",respuestas[difi-1].nresp1);
- 					monedas-=2;
+ 					monedas-=2;//se le quitan dos monedas
  	    			i=1;
         		}
- 	    		if ((strcmp(respu,tienda)==0)&&(monedas<=0)){
+ 	    		if ((strcmp(respu,tienda)==0)&&(monedas<=0)){ //Se elige la opcion de tienda pero no le quedan monedas
  					printf("No le quedan monedas\n");
  	    		} 
         	}
-        	moneda(monedas);
-        	vida(vidas);
+        	moneda(monedas); //Se imprimen las monedas
+        	vida(vidas); //Se imprimen las vidas
         	
         }
         printf("Pulse enter para continuar:\n");
@@ -206,7 +206,7 @@ int main(){
         system("cls");
 		}
  
-//parte 3
+//PREGUNTA 2
 		if (vidas!=0){
 			for(i=0;i<tamanoparte[part];i++){
 				printf("%c",historia[j+i]);
@@ -246,7 +246,7 @@ int main(){
         	}
         	
 
-//parte 4
+//PREGUNTA 3
 		if (vidas!=0){
 
 			for(i=0;i<tamanoparte[part];i++){
@@ -287,7 +287,7 @@ int main(){
         }
         
 
-//parte 5
+//PREGUNTA 4
 		if (vidas!=0){
 
 			for(i=0;i<tamanoparte[part];i++){
@@ -330,7 +330,7 @@ int main(){
         
 
 
-//parte 6
+//PREGUNTA 5
 		if (vidas!=0){
 
 			for(i=0;i<tamanoparte[part];i++){
@@ -371,7 +371,7 @@ int main(){
         }
 
 
-//parte 7
+//PREGUNTA 6
 		if (vidas!=0){
 			for(i=0;i<tamanoparte[part];i++){
 				printf("%c",historia[j+i]);
@@ -412,7 +412,7 @@ int main(){
 			
 
 
-//parte 8
+//PREGUNTA 7
 		if (vidas!=0){
 
 			for(i=0;i<tamanoparte[part];i++){
@@ -452,7 +452,7 @@ int main(){
         system("cls");
         }
 
-//parte 9
+//PREGUNTA 8
 		if (vidas!=0){
 
 			for(i=0;i<tamanoparte[part];i++){
@@ -494,7 +494,7 @@ int main(){
 
 
 
-//parte 10
+//PREGUNTA 9
 		if (vidas!=0){
 
 			for(i=0;i<tamanoparte[part];i++){
@@ -534,7 +534,7 @@ int main(){
         gets(espacios);
         system("cls");
     }
-//parte 11
+//PREGUNTA 10
 		if (vidas!=0){
 			if (difi==2){
 				for(i=0;i<tamanoparte[part];i++){
@@ -573,7 +573,7 @@ int main(){
         		gets(espacios);
         		system("cls");
 			}}
-//parte 12
+//PARTE FINAL
 		if (vidas!=0){
 
 			for(i=0;i<tamanoparte[part];i++){
@@ -588,12 +588,14 @@ int main(){
 		partidaganper(vidas,nombre);
 
 
-//fin 
-
+//FIN 
+		
+		
 		printf("¿Desea, jugar de nuevo (si/no)?\n");
 		/*for(i=0;i<49;i++){
 			printf("\n");
 		}*/
+		fflush (stdin);
 		gets(final);
 		//Una vez acabado el juego se te pregunta si quieres volver a jugar con o sin hacks
 		if (final[0]=='n'){ //Si se escribe no o n salta el final 
@@ -662,7 +664,7 @@ void inicio(){
 	int i;
 	char espacios[N];
 	system ("color 8F");
-//Inicio
+//Inicio en el que se utilizan bucles para imprimir el menu de inicio
 	for(i=0;i<6;i++){
 		printf("---\t");
 	}
@@ -682,15 +684,15 @@ void inicio(){
 	printf("Pulse enter para comenzar.\n");
 	fflush (stdin);
 	gets(espacios);
-	system ("color 1A");
-	for(i=0;i<6000;i++){
+	system ("color 1A"); //Cmbio de color del fondo 
+	for(i=0;i<6000;i++){ //Bucle para imprimir (pantalla de carga) despues del menu de inicio
 		printf("%c\t",25);
 		printf("%c\t",31);
 	}
 	printf(" \n");
 	printf(" \n");
 	system("cls");
-	system ("color 9E");
+	system ("color 9E"); //Cmbio de color del fondo
 }
 
 
@@ -742,7 +744,7 @@ void hack(){
 void  vida(int vidas){
 	char i,j=3;
 	printf("\n");
-	if ((vidas<=5)&&(vidas>=0)){
+	if ((vidas<=5)&&(vidas>=0)){ //Utilizamos un if para imprimir vidas en caso de que no sean infinitas
 		printf("-Le quedan %d vidas.\n",vidas);
 		for (i=0;i<vidas;i++){
 			printf("%c\t",j);
@@ -757,7 +759,7 @@ void  vida(int vidas){
 void  moneda(int monedas){
 	char i,j=169;
 	printf("\n");
-	if (monedas<=10){
+	if (monedas<=10){ //Utilizamos un if para imprimir monedas en caso de que las monedas no sean infinitas
 	printf("-Le quedan %d monedas.\n",monedas);
 		for (i=0;i<monedas;i++){
 			printf("%c\t",j);
@@ -829,8 +831,9 @@ void clases(){
 
 }
 
-//Funcion para estadisticas
+///Funcion para estadisticas
 void estadisticas(char nombre[],int dimperso,char personaje[],int dimpers,int vidas, int monedas){
+	fflush (stdin);
 	FILE*festadistica;
 	festadistica=fopen("ESTADISTICASEPICQUEST.txt","a");
 	fprintf(festadistica, "Usuario: %s | Personaje escogido: %s | Vidas restantes: %d |Monedas no utilizadas: %d | ",nombre,personaje,vidas,monedas);
