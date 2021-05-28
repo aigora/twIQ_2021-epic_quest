@@ -97,8 +97,8 @@ int main(){
 			switch (difi){
 				case 1: //Si se elige la opcion 1 comenzara el juego con la historia 1 y con monedas y vidas concretas para la historia 1
 					if(h!=2){
-					vidas=100;
-			 		monedas=100;}
+					vidas=5;
+			 		monedas=10;}
 			 		fhistoria=fopen("historia1.txt","r");//apertura historia 1
 		            flongitud=fopen("tamano1.txt","r");//apertura tamaño historia 1
 			 		w=1;
